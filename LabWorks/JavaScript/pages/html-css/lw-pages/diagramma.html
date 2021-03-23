@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../icons/canvas.svg">
+    <title>Canvas</title>
+</head>
+<body>
+    
+    <canvas id="drawArea" width="1420" height="720" style="border: 1px solid #414141; color: #ff4800;"></canvas>
+
+    <script>
+        let canvas = document.getElementById("drawArea")
+        let drawArea = canvas.getContext("2d")
+
+        function drawSection(x, y, radius, startAngle, endAngle, fillColor, strokeColor){
+            drawArea.beginPath()
+            drawArea.moveTo(x, y)
+            drawArea.fillStyle = fillColor
+            drawArea.strokeStyle = strokeColor
+            drawArea.arc(x, y, radius, startAngle, endAngle)
+            drawArea.lineTo(x, y)
+            drawArea.fill()
+            drawArea.stroke()
+        }
+
+        // рисуем сектора
+        drawSection(350, 350, 260, 0, (Math.PI/180)*60, 'coral', 'coral')
+        drawSection(350, 350, 260, (Math.PI/180)*60, (Math.PI/180)*280, 'orange', 'orange')
+        drawSection(350, 350, 260, (Math.PI/180)*280, 0, '#ff4800', '#ff4800')
+
+        // добавляем обозначения
+        drawArea.beginPath()
+        drawArea.font = '36px Arial'
+        drawArea.fillStyle = 'coral'
+        drawArea.fillText('Детский сад', 860, 255)
+        drawArea.fillRect(800, 230, 30, 30)
+
+        drawArea.beginPath()
+        drawArea.fillStyle = 'orange'
+        drawArea.fillText('Школа', 860, 355)
+        drawArea.fillRect(800, 330, 30, 30)
+
+        drawArea.beginPath()
+        drawArea.fillStyle = '#ff4800'
+        drawArea.fillText('Университет', 860, 455)
+        drawArea.fillRect(800, 430, 30, 30)
+
+        // добавляем подпись
+        drawArea.beginPath()
+        drawArea.font = '22px Arial'
+        drawArea.fillStyle = '#222'
+        drawArea.shadowOffsetX = 2
+        drawArea.shadowOffsetY = -2
+        drawArea.shadowColor = '#555'
+        drawArea.shadowBlur = 5
+        drawArea.fillText('Диаграмма 1, Время обучения в различных учебных заведениях', 370, 700)
+        drawArea.closePath()
+
+        drawArea.lineWidth = '1'
+        drawArea.lineCap = 'round'
+        drawArea.lineJoin = 'round'
+    </script>
+</body>
+</html>

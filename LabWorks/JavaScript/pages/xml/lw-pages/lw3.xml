@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lw3.xslt"?>
+<table>
+    <info>
+        <university>БГТУ</university>
+
+        <points-budget>312</points-budget>
+        <points-pay>262</points-pay>
+
+        <set-budget>25</set-budget>
+        <set-pay>35</set-pay>
+
+        <city>Минск</city>
+    </info>
+
+    <info>
+        <university>БГТУ</university>
+
+        <points-budget>312</points-budget>
+        <points-pay>262</points-pay>
+
+        <set-budget>25</set-budget>
+        <set-pay>35</set-pay>
+        
+        <city>Минск</city>
+    </info>
+
+    <info>
+        <university>БГТУ</university>
+
+        <points-budget>312</points-budget>
+        <points-pay>262</points-pay>
+
+        <set-budget>25</set-budget>
+        <set-pay>35</set-pay>
+        
+        <city>Минск</city>
+    </info>
+
+    <info>
+        <university>БГТУ</university>
+
+        <points-budget>312</points-budget>
+        <points-pay>262</points-pay>
+
+        <set-budget>25</set-budget>
+        <set-pay>35</set-pay>
+        
+        <city>Минск</city>
+    </info>
+    
+    <info>
+        <university>БГТУ</university>
+
+        <points-budget>312</points-budget>
+        <points-pay>262</points-pay>
+
+        <set-budget>25</set-budget>
+        <set-pay>35</set-pay>
+        
+        <city>Минск</city>
+    </info>
+</table>

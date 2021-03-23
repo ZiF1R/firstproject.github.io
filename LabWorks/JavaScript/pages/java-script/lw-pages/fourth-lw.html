@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../../main.style.css">
+    <link rel="stylesheet" href="lw-styles/question.css">
+    <link rel="stylesheet" href="../code-template.css">
+    <link rel="icon" type="image/x-icon" href="../icons/java-script.svg">
+
+    <!-- 
+        ../../../../Modules/highlight/styles/monokai-sublime.css
+     -->
+
+    <link rel="stylesheet" href="../../../../Modules/highlight/styles/stackoverflow-light.css">
+    <script src="../../../../Modules/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <title>Java Script</title>
+</head>
+
+<body>
+
+    <div class="toTop">
+        <a href="#top" class="anchor" title="Наверх"></a>
+    </div>
+
+    <button class="open-menu" onclick="openMenu()"></button>
+    
+    <header id="top">
+        <div class="practice">
+            <a href="../../../../Практикум_КЯР_2019/index.html" target="blank" title="Перейти к практикуму"></a>
+        </div>
+
+        <div class="home">
+            <a href="../../../main.page.html" title="Home"></a>
+        </div>
+    </header>
+
+    <div class="head">
+        <div class="content">
+            <span class="page-title">
+                Лабораторная работа 4
+            </span>
+            <div class="description">
+                Пользовательские объекты <span class="lang">Java Script</span>. Специальные операторы.
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="main-content">
+
+            <span class="title">Цель работы</span>
+            <div class="introduction">
+                Изучить способы создания пользовательских объектов,
+                познакомиться с правилами применения специальных операторов: <strong>delete, in,                     instanceof, typeof</strong>.
+            </div>
+
+            <span class="title">Задания</span>
+            <div class="questions">
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 1</span>
+                        <div class="question-describe">
+                            Создать пользовательский объект <strong>Gruppa</strong> <em>(использовать пример, представленный выше)</em>. Добавить метод <strong>sub_stud</strong> <em>(исключить из группы <strong>k</strong> студентов)</em>. Создать несколько экземпляров объекта <strong>Gruppa</strong> <em>(gr2, gr3, gr4)</em>. Применить методы <strong>add_stud</strong> и <strong>sub_stud</strong> к каждому экземпляру. Вывести на страницу количество студентов в каждой группе.
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">Решение</span>
+
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">Java Script</span>
+                            
+                            <pre><code class="JavaScript">function Group(group_number, speciality, students_number){
+    this.group_number = group_number
+    this.speciality = speciality
+    this.students_number = students_number
+                              
+    this.sub_student = function sub_student(count) { 
+        this.students_number -= count
+        if(count == 1)
+            alert("Из группы " + this.group_number + " был исключен " 
+                + count + " студент.")
+        else
+            alert("Из группы " + this.group_number + " было исключено " 
+                + count + " студентов.")
+    }
+                                    
+    this.add_student = function add_student(count) { 
+        this.students_number += count
+        if(count == 1)
+            alert("В группу " + this.group_number + " был добавлен " 
+                + count + " студент.")
+        else
+            alert("В группу " + this.group_number + " было добавлено " 
+                + count + " студентов.")
+    }
+}
+                          
+let first_group = new Group(1, "Web Design", 30)
+let second_group = new Group(2, "Software", 27)
+let third_group = new Group(3, "Game Dev", 28)
+                          
+let first_start = first_group.students_number
+let second_start = second_group.students_number
+let third_start = third_group.students_number
+                          
+alert(first_group.speciality + ": " + first_group.group_number + "-я группа, " 
+    + first_group.students_number + " студентов.\n" 
++ second_group.speciality + ": " + second_group.group_number + "-я группа, " 
+    + second_group.students_number + " студентов.\n"
++ third_group.speciality + ": " + third_group.group_number + "-я группа, " 
+    + third_group.students_number + " студентов.")
+                          
+let substract = prompt("Сколько студентов вы хотите исключить из группы " 
+                    + first_group.group_number + "?", 0)
+substract = Number.parseInt(substract)
+first_group.sub_student(substract)
+                          
+let add = prompt("Сколько студентов вы хотите добавить в группу " 
+                + second_group.group_number + "?", 0)
+add = Number.parseInt(add)
+second_group.add_student(add)
+                          
+add = prompt("Сколько студентов вы хотите добавить в группу " 
+        + third_group.group_number + "?", 0)
+add = Number.parseInt(add)
+third_group.add_student(add)
+                             
+substract = prompt("Сколько студентов вы хотите исключить из группы " 
+                    + third_group.group_number + "?", 0)
+substract = Number.parseInt(substract)
+third_group.sub_student(substract)
+                          
+alert("В " + first_group.group_number + "-й группе было " + first_start 
+    + " студентов, стало " + first_group.students_number + '\n'
++ "В " + second_group.group_number + "-й группе было " + second_start 
+    + " студентов, стало " + second_group.students_number + '\n'
++ "В " + third_group.group_number + "-й группе было " + third_start 
+    + " студентов, стало " + third_group.students_number + '\n')
+                            </code></pre>
+
+                        </div>
+
+                        <input type="button" value="Выполнить код" onclick="user_object_group()" title="Запустить программу">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 2</span>
+                        <div class="question-describe">
+                            Создать пользовательский объект <strong>Студент</strong>. <strong>Свойства</strong>: <em>имя, фамилия, физика (оценка), математика, информатика</em>. <strong>Методы</strong>: <em>вывести свое имя и фамилию в окно, рассчитать средний балл и вывести на страницу</em>. Создать 3 экземпляра объекта <strong>Студент</strong>. Вывести информацию о всех студентах. Добавить какое-нибудь свойство объекту <strong>Студент</strong>. Задать значение этого свойства для всех экземпляров. Вывести информацию о всех студентах на страницу.<br> Вместо объекта <strong>Студент</strong> можно придумать свой пример. Это приветствуется.
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">Решение</span>
+
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">Java Script</span>
+                            
+                            <pre><code class="JavaScript">function Student(m_name, m_secondName, m_physicsMark, 
+    m_mathMark, m_compScienceMark){
+    this.m_name = m_name
+    this.m_secondName = m_secondName
+    this.m_physicsMark = m_physicsMark
+    this.m_mathMark = m_mathMark
+    this.m_compScienceMark = m_compScienceMark
+                            
+    this.printName = (name, secondName) => {
+        this.m_name = name
+        this.m_secondName = secondName
+        alert("Фамилия: " + this.m_secondName
+            + "\nИмя: " + this.m_name)
+    }
+                            
+    this.printGroup = group => {
+        this.m_group = group
+        alert("Группа: " + this.m_group)
+    }
+                            
+    this.averageMark = (physicsMark, mathMark, compScienceMark) => {
+        this.m_physicsMark = physicsMark
+        this.m_mathMark = mathMark
+        this.m_compScienceMark = compScienceMark
+                            
+        let average = ((this.m_physicsMark + this.m_mathMark + this.m_compScienceMark) / 3).toFixed(2)
+                            
+        alert("Средний балл: " + average)
+    }
+                            
+    this.printAllInfo = (name, secondName, physicsMark, mathMark, compScienceMark, gr{
+        this.m_name = name
+        this.m_secondName = secondName
+        this.m_physicsMark = physicsMark
+        this.m_mathMark = mathMark
+        this.m_compScienceMark = compScienceMark
+            this.m_group = group
+                            
+        let average = ((this.m_physicsMarkm_mathMark + this.m_compScienceMartoFixed(2)
+                            
+        alert("Фамилия: " + this.m_secondName
+        + "\nИмя: " + this.m_name
+        + "\nГруппа: " + this.m_group
+        + "\nСредний балл: " + average)
+    }
+}
+                          
+let student1  = new Student("Александр", "Добриян", 7, 4, 9)
+                          
+let student2  = new Student("Чеслав", "Линевич", 10, 10, 10)
+   
+Student.prototype.m_group = this.m_group
+
+student1.m_group = 10
+student2.m_group = 10
+                          
+student1.printName(student1.m_name, student1.m_secondName)
+student1.printGroup(student1.m_group)
+student1.averageMark(student1.m_physicsMark, student1.m_mathMark, 
+        student1.m_compScienceMark)
+                          
+student2.printName(student2.m_name, student2.m_secondName)
+student2.printGroup(student2.m_group)
+student2.averageMark(student2.m_physicsMark, student2.m_mathMark, 
+        student2.m_compScienceMark)
+                          
+student1.printAllInfo(student1.m_name, student1.m_secondName, 
+        student1.m_physicsMark, student1.m_mathMark, student1.m_compScienceMark, student1.m_group)
+student2.printAllInfo(student2.m_name, student2.m_secondName, 
+        student2.m_physicsMark, student2.m_mathMark, student2.m_compScienceMark, student2.m_group)</code></pre>
+
+                        </div>
+
+                        <input type="button" value="Выполнить код" title="Запустить программу" class="new-doc-btn">
+
+                        <div class="new-document-area">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 3</span>
+                        <div class="question-describe">
+                            Использовать объекты <strong>Math</strong>, <strong>Array</strong> и <strong>String</strong> из <em>лабораторной работы № 3</em>.<br>
+                            <strong>Delete</strong>. Удалить из массива элемент с номером <strong>3</strong>, вывести исходный массив и полученный. <br>
+                            <strong>In</strong>. Проверить, имеется ли у массива <strong>2-й</strong> элемент. Проверить наличие любого свойства у созданных ранее пользовательских объектов <strong>Gruppa</strong> и <strong>Студент</strong>. <br>
+                            <strong>Instanceof</strong>. Проверить, являются ли созданные объекты объектами <strong>Array</strong>, <strong>String</strong>, <strong>Object</strong>. <br>
+                            <strong>Typeof</strong>. Создать функцию, которая просто возвращает значение 5. Узнать тип всех созданных ранее объектов, включая функцию. Узнать тип всех свойств пользовательских объектов <strong>Gruppa</strong> и <strong>Студент</strong>.
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">Решение</span>
+
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">Java Script</span>
+                            
+                            <pre><code class="JavaScript">// оператор delete
+alert("Исходный массив:\n" + arrayObj)
+                             
+delete arrayObj[2]
+alert("Массив, после удаления 3-го элемента:\n" + arrayObj)
+                                
+// оператор in
+2 in arrayObj ? alert("В массиве есть 3-й элемент.") : alert("В массиве нет 3-го элемента.")
+                             
+'m_name' in student1 ? alert("В объекте 'Student' есть свойство 'm_name'.") 
+        : alert("В объекте 'Student' нет свойства 'm_name'.")
+                             
+'m_name' in first_group ? alert("В объекте 'Group' есть свойство 'm_name'.") 
+        : alert("В объекте 'Group' нет свойства 'm_name'.")
+                             
+// оператор instanceof
+let instanceText;
+strObj instanceof String ? instanceText = "'strObj' является объектом String.\n" 
+        : instanceText = "'strObj' не является объектом String.\n"
+                             
+arrayObj instanceof Array ? instanceText += "'arrayObj' является объектом Array.\n" 
+        : instanceText += "'arrayObj' не является объектом Array.\n"
+                             
+student1 instanceof Student ? instanceText += "'student1' является объектом Student.\n" 
+        : instanceText += "'student1' не является объектом Student.\n"
+                             
+alert(instanceText);
+                             
+// оператор typeof
+const returnFive = () => 5
+                             
+alert("Тип обьекта, который возвращает число 5: " + typeof returnFive
+    + "\nТип обьекта 'strObj': " + typeof strObj
+    + "\nТип обьекта 'arrayObj': " + typeof arrayObj
+    + "\nТип обьекта 'student1': " + typeof student1
+    + "\nТип обьекта 'first_group': " + typeof first_group
+    + "\nТип обьекта 'Group': " + typeof Group
+    + "\nТип обьекта 'Student': " + typeof Student)
+                             
+alert("Объект Student:"
+    + "\nТип свойства 'm_name': " + typeof student1.m_name
+    + "\nТип свойства 'm_secondName': " + typeof student1.m_secondName
+    + "\nТип свойства 'm_physicsMark': " + typeof student1.m_physicsMark
+    + "\nТип свойства 'm_mathMark': " + typeof student1.m_mathMark
+    + "\nТип свойства 'm_compScienceMark': " + typeof student1.m_compScienceMark
+    + "\nТип свойства 'm_group': " + typeof student1.m_group)
+   
+alert("Объект Group:"
+    + "\nТип свойства 'group_number': " + typeof first_group.group_number
+    + "\nТип свойства 'speciality': " + typeof first_group.speciality
+    + "\nТип свойства 'students_number': " + typeof first_group.students_number)</code></pre>
+
+                        </div>
+
+                        <input type="button" value="Выполнить код" onclick="user_object_methods()" title="Запустить программу">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="goto-page">
+                <div class="previous">
+                    <a href="third-lw.html" class="previous-img" title="К предыдущей лабораторной">
+                        <img src="../icons/left-arrow.svg">
+                    </a>
+                    <span  class="previous-lw">
+                        Предыдущая лабораторная
+                    </span>
+                </div>
+                <div class="next">
+                    <span class="next-lw">
+                        Следующая лабораторная
+                    </span>
+                    <a href="fifth-lw.html" class="next-img" title="К следующей лабораторной">
+                        <img src="../icons/right-arrow.svg">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <nav>
+            <button class="close-menu" onclick="closeMenu()"></button>
+            <div class="container">
+                <div class="menu">
+    
+                    <div class="item watch">
+                        <a href="../../../main.page.html" class="sub-title" title="Перейти к разделу">
+                            Главная
+                        </a>
+                    </div>
+    
+                    <div class="item watch">
+                        <a href="../../html-css/html&css-page.html" class="sub-title" title="Перейти к разделу">HTML5</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="../../html-css/lw-pages/lw1.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="../../html-css/lw-pages/lw2.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../html-css/lw-pages/lw3.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="item current">
+                        <a href="../../java-script/js-page.html" class="sub-title current-title">JavaScript</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="first-lw.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="second-lw.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="third-lw.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="fourth-lw.html" class="sub-item current-lw">
+                                    Лабораторная работа 4
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="fifth-lw.html" class="sub-item">
+                                    Лабораторная работа 5
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="sixth-lw.html" class="sub-item">
+                                    Лабораторная работа 6
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="seventh-lw.html" class="sub-item">
+                                    Лабораторная работа 7
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="eighth-lw.html" class="sub-item">
+                                    Лабораторная работа 8
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="ninth-lw.html" class="sub-item">
+                                    Лабораторная работа 9
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="tenth-lw.html" class="sub-item">
+                                    Лабораторная работа 10
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="item watch">
+                        <a href="../../xml/xml-page.html" class="sub-title" title="Перейти к разделу">XML</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw1.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw2.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw3.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw4.html" class="sub-item">
+                                    Лабораторная работа 4
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw5.html" class="sub-item">
+                                    Лабораторная работа 5
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw6.html" class="sub-item">
+                                    Лабораторная работа 6
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw7.html" class="sub-item">
+                                    Лабораторная работа 7
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw8.html" class="sub-item">
+                                    Лабораторная работа 8
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </nav>
+
+    </main>
+
+    <footer>
+        <div class="info">
+
+            <div class="contact-us">
+
+                <span class="article-title">
+                    Contact us
+                </span>
+
+                <div class="article-content">
+                    <div class="telephone">
+                        <span class="contact-icon"></span>
+                        <span>
+                            +375(29) 634 05 15
+                        </span>
+                    </div>
+                    <div class="mail">
+                        <span class="contact-icon"></span>
+                        <span>
+                            info@mail.ru
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="links">
+                <span class="article-title">
+                    Links
+                </span>
+
+                <div class="article-content">
+
+                   <div class="icons-resource">
+                        Icons made by 
+                        <a href="https://www.flaticon.com/" title="Flaticon" target="blank"> 
+                            www.flaticon.com
+                        </a>
+                   </div>
+
+                   <div class="icons-resource">
+                        Used library
+                        <a href="https://highlightjs.org/" title="Highlight.js" target="blank"> 
+                            www.highlightjs.org
+                        </a>
+                   </div>
+
+                   <div class="university">
+                        <a href="http://www.belstu.by/"
+                        title="Перейти на сайт БГТУ" target="blank">
+                            BSTU
+                        </a>
+                   </div>
+                    
+                </div>
+            </div>
+
+            <div class="about">
+                <span class="article-title">
+                    About
+                </span>
+
+                <div class="article-content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit laboriosam assumenda sequi vero nulla saepe dolorem harum, quae atque aut quod exercitationem quibusdam eligendi similique animi culpa repellendus quis unde minus! Eveniet, unde facere aut ab ullam quis beatae non eligendi ut odio. Recusandae odio rem in, iure voluptatibus doloremque!
+                </div>
+            </div>
+
+        </div>
+
+        <div class="rights">
+            Copyright &#169; 2021, created by
+            <a href="https://vk.com/sashadobriyan" class="vk-link" target="blank">
+                Z1FiR
+            </a>
+        </div>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="lw-scripts/fourth-lw.js"></script>
+    <script src="../../../main.script.js"></script>
+
+</body>
+</html>

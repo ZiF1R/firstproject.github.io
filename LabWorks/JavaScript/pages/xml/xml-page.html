@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../main.style.css">
+    <link rel="stylesheet" href="../java-script/code-template.css">
+    <link rel="icon" type="image/x-icon" href="icons/xml.svg">
+
+    <link rel="stylesheet" href="../../../Modules/highlight/styles/stackoverflow-light.css">
+    <script src="../../../Modules/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <title>XML</title>
+</head>
+
+<body>
+
+    <div class="toTop">
+        <a href="#top" class="anchor" title="Наверх"></a>
+    </div>
+
+    <button class="open-menu" onclick="openMenu()"></button>
+    
+    <header id="top">
+        <div class="practice">
+            <a href="../../../Практикум_КЯР_2019/index.html" target="blank" title="Перейти к практикуму"></a>
+        </div>
+
+        <div class="home">
+            <a href="../../main.page.html" title="Home"></a>
+        </div>
+    </header>
+
+    <div class="head">
+        <div class="content">
+            <span class="page-title">
+                XML
+            </span>
+            <div class="description">
+                Лабораторные работы по
+                <span class="lang">XML</span>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="main-content">
+
+            <span class="title">Введение</span>
+            <div class="introduction">
+                <strong>XML</strong> <em>(от англ. eXtensible Markup Language)</em> – расширяемый язык
+                разметки. Он создан для структурирования, хранения и передачи
+                информации. <strong>XML</strong> – это общий инструмент передачи данных между всеми
+                видами приложений. В языке XML нет предопределенных тегов, автор
+                определет свои языковые теги и свою структуру документа.
+                Пример XML документа:
+
+                <div class="code-temp">
+                    <span class="code-lang">XML</span>
+                    <pre><code class="xml">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;note>
+    &lt;to>Анна&lt;/to>
+    &lt;from>Дмитрий&lt;/from>
+    &lt;heading>Напоминание&lt;/heading>
+    &lt;body>Не забудь обо мне в эти выходные!&lt;/body>
+&lt;/note></code></pre>
+                </div>
+
+                Первая строка – это <em>XML</em> декларация. Здесь определяется версия <strong>XML
+                (1.0)</strong>. На следующей строке описывается корневой элемент документа:
+
+                <div class="code-temp">
+                    <span class="code-lang">XML</span>
+                    <pre><code class="xml">&lt;note></code></pre>
+                </div>
+
+                Следующие 4 строки описывают дочерние элементы корневого
+                элемента: 
+
+                <div class="code-temp">
+                    <span class="code-lang">XML</span>
+                    <pre><code class="xml">&lt;to>Анна&lt;/to>
+&lt;from>Дмитрий&lt;/from>
+&lt;heading>Напоминание&lt;/heading>
+&lt;body>Не забудь обо мне в эти выходные!&lt;/body></code></pre>
+                </div>
+
+                И, наконец, последняя строка определяет конец
+                корневого элемента:
+
+                <div class="code-temp">
+                    <span class="code-lang">XML</span>
+                    <pre><code class="xml">&lt;/note></code></pre>
+                </div>
+
+            </div>
+
+            <span class="title">Лабораторные работы:</span>
+            <div class="sections">
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 1
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задание</span>
+                        <div class="preview-text">
+                            Создайть <strong>XML</strong>-документ, который будет содержать информацию по
+                            вашей специальности в других университетах <em>(университет, проходной балл,
+                            план набора, город, в котором размещен университет)</em>. При выполнении
+                            задания используйте <strong>css</strong>.
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/lw1.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 2
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задание</span>
+                        <div class="preview-text">
+                            На основе прошлой лабораторной работы составьте валидный <strong>XML</strong>-документ, используя 2 способа: с помощью <strong>DTD</strong>, а также <strong>XML</strong> схемы.
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/lw2.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 3
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задание</span>
+                        <div class="preview-text">
+                            Оформите задание <em>лабораторной работы <strong>№1</strong></em> через подключение <strong>XSLT</strong>.
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/lw3.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 4
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задание</span>
+                        <div class="preview-text">
+                            Создайте <strong>XML</strong>-документ, в котором будет расположена информация о ваших одногруппниках. Например: <em>фамилия, имя, отчество, проходной балл, год рождения</em>. Произведите сортировку по году рождения, выделите красным цветом имена тех одногруппников, которые имеют средний балл <em>меньше</em> <strong>6</strong>, и зелeным тех, которые имеют средний балл <em>равный</em> <strong>6</strong>.
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/lw4.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 5
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задание</span>
+                        <div class="preview-text">
+                            Составьте несколько <strong>XML</strong>-документов, в которых будет храниться информация о студентах. При помощи <em><strong>XML DOM</strong></em> выведите по 1-му любому из студентов.
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/lw5.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 6
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Создайте на <strong>html</strong>-страничке svg-изображение с использованием различных примитивов, заливок <em><strong>(fill)</strong></em> и обводок <em><strong>(stroke)</strong></em>, нарисуйте фигуры с наложением и примените прозрачность <em><strong>(fill-opacity)</strong></em>. 
+                            <strong>Задание 2.</strong> Примените трансформацию к отдельным примитивам. 
+                            <strong>Задание 3.</strong> Примените градиентную заливку к отдельным фигурам.
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/lw6.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 7
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Напишите коды следующих анимаций для любого примитива <em>(круг, прямоугольник)</em>:<br>
+                            • перемещение по прямой;<br>
+                            • изменение размера <em>(радиуса)</em>;<br>
+                            • изменение цвета при одновременном перемещении по оси X;<br>
+                            • изменение толщины обводки.
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/lw7.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+<!-- 
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 8
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Создать программу на <em>JS</em>, изменяющую цвет слова в тексте
+                            при наведении курсора мыши (событие <em>Onmouseover</em>, свойство <em>style.color</em>).
+                            <strong>Задание 2.</strong> Создать программу на <em>JS</em>, изменяющую размер шрифта слова
+                            щелчком мыши (событие <em>Onclick</em>, свойство <em>style.fontSize</em>).
+                            <strong>Задание 3.</strong> Создать программу на JS замены картинки на другую при
+                            щелчке мышью с помощью метода getElementById и свойства src.
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/eighth-lw.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div> -->
+
+            </div>
+            
+        </div>
+
+        <nav>
+            <button class="close-menu" onclick="closeMenu()"></button>
+            <div class="container">
+                <div class="menu">
+    
+                    <div class="item watch">
+                        <a href="../../main.page.html" class="sub-title" title="Перейти к разделу">
+                            Главная
+                        </a>
+                    </div>
+    
+                    <div class="item watch">
+                        <a href="../html-css/html&css-page.html" class="sub-title" title="Перейти к разделу">HTML5</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="../html-css/lw-pages/lw1.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="../html-css/lw-pages/lw2.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../html-css/lw-pages/lw3.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="item watch">
+                        <a href="../java-script/js-page.html" class="sub-title" title="Перейти к разделу">JavaScript</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/first-lw.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/second-lw.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/third-lw.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/fourth-lw.html" class="sub-item">
+                                    Лабораторная работа 4
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/fifth-lw.html" class="sub-item">
+                                    Лабораторная работа 5
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/sixth-lw.html" class="sub-item">
+                                    Лабораторная работа 6
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/seventh-lw.html" class="sub-item">
+                                    Лабораторная работа 7
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/eighth-lw.html" class="sub-item">
+                                    Лабораторная работа 8
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/ninth-lw.html" class="sub-item">
+                                    Лабораторная работа 9
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/tenth-lw.html" class="sub-item">
+                                    Лабораторная работа 10
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="item current">
+                        <a href="../xml/xml-page.html" class="sub-title current-title">XML</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="lw-pages/lw1.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="lw-pages/lw2.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw-pages/lw3.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw-pages/lw4.html" class="sub-item">
+                                    Лабораторная работа 4
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw-pages/lw5.html" class="sub-item">
+                                    Лабораторная работа 5
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw-pages/lw6.html" class="sub-item">
+                                    Лабораторная работа 6
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw-pages/lw7.html" class="sub-item">
+                                    Лабораторная работа 7
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw-pages/lw8.html" class="sub-item">
+                                    Лабораторная работа 8
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </nav>
+
+    </main>
+
+    <footer>
+        <div class="info">
+
+            <div class="contact-us">
+
+                <span class="article-title">
+                    Contact us
+                </span>
+
+                <div class="article-content">
+                    <div class="telephone">
+                        <span class="contact-icon"></span>
+                        <span>
+                            +375(29) 634 05 15
+                        </span>
+                    </div>
+                    <div class="mail">
+                        <span class="contact-icon"></span>
+                        <span>
+                            info@mail.ru
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="links">
+                <span class="article-title">
+                    Links
+                </span>
+
+                <div class="article-content">
+
+                   <div class="icons-resource">
+                        Icons made by 
+                        <a href="https://www.flaticon.com/" title="Flaticon" target="blank"> 
+                            www.flaticon.com
+                        </a>
+                   </div>
+
+                   <div class="icons-resource">
+                        Used library
+                        <a href="https://highlightjs.org/" title="Highlight.js" target="blank"> 
+                            www.highlightjs.org
+                        </a>
+                   </div>
+
+                   <div class="university">
+                        <a href="http://www.belstu.by/"
+                        title="Перейти на сайт БГТУ" target="blank">
+                            BSTU
+                        </a>
+                   </div>
+                    
+                </div>
+            </div>
+
+            <div class="about">
+                <span class="article-title">
+                    About
+                </span>
+
+                <div class="article-content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit laboriosam assumenda sequi vero nulla saepe dolorem harum, quae atque aut quod exercitationem quibusdam eligendi similique animi culpa repellendus quis unde minus! Eveniet, unde facere aut ab ullam quis beatae non eligendi ut odio. Recusandae odio rem in, iure voluptatibus doloremque!
+                </div>
+            </div>
+
+        </div>
+
+        <div class="rights">
+            Copyright &#169; 2021, created by
+            <a href="https://vk.com/sashadobriyan" class="vk-link" target="blank">
+                Z1FiR
+            </a>
+        </div>
+    </footer>
+
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script> -->
+    <script src="../../main.script.js"></script>
+
+</body>
+</html>

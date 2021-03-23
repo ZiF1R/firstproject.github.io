@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="background: unset;">
+    <rect height="80" y="12" transform="skewX(-40)" stroke="red" fill-opacity=".4" stroke-opacity=".2">
+        <animate attributeName="x" from="100" to="700" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="width" from="130" to="220" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="fill" from="coral" to="yellow" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-width" from="3" to="15" dur="3s" repeatCount="indefinite"/>
+    </rect>
+</svg>

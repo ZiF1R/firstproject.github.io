@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../main.style.css">
+    <link rel="stylesheet" href="code-template.css">
+    <link rel="icon" type="image/x-icon" href="icons/java-script.svg">
+
+    <link rel="stylesheet" href="../../../Modules/highlight/styles/stackoverflow-light.css">
+    <script src="../../../Modules/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <title>Java Script</title>
+</head>
+
+<body>
+
+    <div class="toTop">
+        <a href="#top" class="anchor" title="Наверх"></a>
+    </div>
+
+    <button class="open-menu" onclick="openMenu()"></button>
+
+    <header id="top">
+        <div class="practice">
+            <a href="../../../Практикум_КЯР_2019/index.html" target="blank" title="Перейти к практикуму"></a>
+        </div>
+
+        <div class="home">
+            <a href="../../main.page.html" title="Home"></a>
+        </div>
+    </header>
+
+    <div class="head">
+        <div class="content">
+            <span class="page-title">
+                Java Script
+            </span>
+            <div class="description">
+                Лабораторные работы по
+                <span class="lang">Java Script</span>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="main-content">
+
+            <span class="title">Введение</span>
+            <div class="introduction">
+                JavaScript был создан в 1995 году как инструмент, предоставляющий вебдизайнерам возможности программирования. Все современные браузеры
+                имеют поддержку JavaScript. JavaScript встраивается прямо в веб-страницы и
+                исполняется браузером во время их загрузки.
+                JavaScript добавляется на веб-страницы с помощью тэга:
+
+                <div class="code-temp">
+                    <span class="code-lang">Html</span>
+                    
+                    <pre><code class="html">&lt;script&gt;...&lt;/script&gt;</code></pre>
+
+                </div>
+                
+                В следующем примере на страницу выводится текст <em>«Я изучаю JavaScript»</em>.
+
+                <div class="code-temp">
+                    <span class="code-lang">Html</span>
+                    
+                    <pre><code class="html">&lt;script type="text/javascript"&gt;
+    document.write("Я изучаю JavaScript.");
+&lt;/script&gt;</code></pre>
+
+                </div>
+
+                JavaScript код также может храниться во внешнем текстовом файле с
+                расширением <em>.js</em> и подключаться к страницам
+                следующим образом:
+
+                <div class="code-temp">
+                    <span class="code-lang">Html</span>
+                    
+                    <pre><code class="html">&lt;script type="text/javascript" src="ex.js"&gt;&lt;/script&gt;</code></pre>
+
+                </div>
+
+            </div>
+
+            <span class="title">Лабораторные работы:</span>
+            <div class="sections">
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 1
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Опробовать работу с модальными окнами <em>alert, prompt, confirm</em>.
+                            Разработать свой диалог с использованием этих команд. Пример
+                            диалога:
+                            - вывести приветствие в окне <strong>alert</strong> <em>“Вас приветствует учебный центр”</em>;
+                            - затем в окне <strong>prompt</strong> вывести сообщение <em>«Введите имя»</em>, а в окне alert
+                            вывести сообщение <em>«Добро пожаловать на наши курсы, имя»</em>;
+                            - в окне confirm вывести сообщение "Хотите стать Web-дизайнером?"
+                            с альтернативными ответами в окнах alert, если TRUE, то "Учите стили CSS
+                            и JavaScript!", если FALSE то "Упускаете время!".
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/first-lw.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 2
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Все выполненные задания из предыдущей работы оформить в
+                            виде <em>функций</em>. Создать кнопки и запускать задание на выполнение щелчком
+                            по соответствующей кнопке. Поработать над оформлением результатов
+                            вывода (цвет шрифта, кегль, гарнитура).
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/second-lw.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 3
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Сформировать массив (объект <strong>Array</strong>), элементами которого
+                            являются значения выражений. Для вычисления выражений использовать
+                            объект <strong>Math</strong>. Найти максимальный и минимальный элементы массива и их
+                            номера.
+                            <strong>1.</strong>
+                            <em>
+                                6 &#8729; &#960;<sup>2</sup> 
+                                + 3 &#8729; e<sup>8</sup>
+                            </em>&nbsp;
+                            <strong>2.</strong>
+                            <em>
+                                2&#8729;cos(4) + cos(12) + 8 &#8729; e<sup>3</sup>
+                            </em>
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/third-lw.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 4
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Создать пользовательский объект <strong>Gruppa</strong> (использовать
+                            пример, представленный выше). Добавить метод <em>sub_stud</em> (исключить из
+                            группы <em>k</em> студентов). Создать несколько экземпляров объекта <strong>Gruppa</strong> <em>(gr2,
+                            gr3, gr4)</em> . Применить методы <em>add_stud</em> и <em>sub_stud</em> к каждому экземпляру.
+                            Вывести на страницу количество студентов в каждой группе.
+                            <strong>Задание 2.</strong> Создать пользовательский объект Студент. Свойства: имя,
+                            фамилия, физика (оценка), математика, информатика. Методы: вывести свое
+                            имя и фамилию в окно, рассчитать средний балл и вывести на страницу.
+                            Создать 3 экземпляра объекта Студент. Вывести информацию о всех
+                            студентах.
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/fourth-lw.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 5
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Вывести на экран все тэги и их номера в коллекции <strong>all</strong> своей
+                            первой web-страницы.
+                            <strong>Задание 2.</strong> Вывести все дочерние элементы узла <em>document.body</em> своей
+                            первой web-страницы.
+                            <strong>Задание 3.</strong> Вывести в окно содержимое первого элемента <em>span</em>:
+                            - используя для доступа к элементу коллекцию <strong>all</strong>;
+                            - используя частную коллекцию (span);
+                            - используя идентификатор элемента.
+                            <strong>Задание 4.</strong> Организовать доступ к содержимому таблицы и посчитать свой
+                            средний балл. Добавить значение среднего балла к содержимому второго
+                            элемента span.
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/fifth-lw.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 6
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Создать кнопки, открывающие и закрывающие окна с
+                            произвольными именами. Создать кнопки, выводящие в каждое из окон 
+                            какой-нибудь текст, включающий имя окна. Проверить работу скрипта в
+                            разных браузерах.
+                            <strong>Задание 2.</strong> Узнать:
+                            <strong>1)</strong> всю информацию о браузере пользователя;
+                            <strong>2)</strong> версию браузера;
+                            <strong>3)</strong> название браузера;
+                            <strong>4)</strong> кодовое название браузера;
+                            <strong>5)</strong> ОС, которую использует пользователь;
+                            <strong>6)</strong> включена ли поддержка Java в браузере;
+                            <strong>7)</strong> ширину и высоту экрана;
+                            <strong>8)</strong> глубину цвета;
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/sixth-lw.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 7
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Проанализировать код для создания формы, представленный
+                            выше. Изучить правила создания элементов формы.
+                            <strong>Задание 2.</strong> Создать форму, содержащую элементы (текстовая область, 2
+                            текстовых поля, список, 4 радиокнопки, 5 флажков, командные кнопки). Вид
+                            формы представлен ниже. 
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/seventh-lw.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 8
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Создать программу на <em>JS</em>, изменяющую цвет слова в тексте
+                            при наведении курсора мыши (событие <em>Onmouseover</em>, свойство <em>style.color</em>).
+                            <strong>Задание 2.</strong> Создать программу на <em>JS</em>, изменяющую размер шрифта слова
+                            щелчком мыши (событие <em>Onclick</em>, свойство <em>style.fontSize</em>).
+                            <strong>Задание 3.</strong> Создать программу на JS замены картинки на другую при
+                            щелчке мышью с помощью метода getElementById и свойства src.
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/eighth-lw.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 9
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Создать программу на <em>JS</em>, позволяющую перетащить мышью
+                            область текста и картинку.
+                            <strong>Задание 2.</strong> Создать программу на <em>JS</em>, организующую движение картинки
+                            по прямой линии.
+                            <strong>Задание 3.</strong> Создать программу на <em>JS</em>, организующую движение картинки
+                            по кривой линии и возврат ее в исходное состояние
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/ninth-lw.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 10
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Выполните задания предыдущих лабораторных работ <em>№8</em> и <em>№9</em> с использованием jQuery.
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/tenth-lw.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+        <nav>
+            <button class="close-menu" onclick="closeMenu()"></button>
+            <div class="container">
+                <div class="menu">
+    
+                    <div class="item watch">
+                        <a href="../../main.page.html" class="sub-title" title="Перейти к разделу">
+                            Главная
+                        </a>
+                    </div>
+    
+                    <div class="item watch">
+                        <a href="../html-css/html&css-page.html" class="sub-title" title="Перейти к разделу">HTML5</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="../html-css/lw-pages/lw1.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="../html-css/lw-pages/lw2.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../html-css/lw-pages/lw3.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="item current">
+                        <a href="../java-script/js-page.html" class="sub-title current-title">JavaScript</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="lw-pages/first-lw.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="lw-pages/second-lw.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw-pages/third-lw.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw-pages/fourth-lw.html" class="sub-item">
+                                    Лабораторная работа 4
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw-pages/fifth-lw.html" class="sub-item">
+                                    Лабораторная работа 5
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw-pages/sixth-lw.html" class="sub-item">
+                                    Лабораторная работа 6
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw-pages/seventh-lw.html" class="sub-item">
+                                    Лабораторная работа 7
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw-pages/eighth-lw.html" class="sub-item">
+                                    Лабораторная работа 8
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw-pages/ninth-lw.html" class="sub-item">
+                                    Лабораторная работа 9
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw-pages/tenth-lw.html" class="sub-item">
+                                    Лабораторная работа 10
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="item watch">
+                        <a href="../xml/xml-page.html" class="sub-title" title="Перейти к разделу">XML</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw1.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw2.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw3.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw4.html" class="sub-item">
+                                    Лабораторная работа 4
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw5.html" class="sub-item">
+                                    Лабораторная работа 5
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw6.html" class="sub-item">
+                                    Лабораторная работа 6
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw7.html" class="sub-item">
+                                    Лабораторная работа 7
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw8.html" class="sub-item">
+                                    Лабораторная работа 8
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </nav>
+
+    </main>
+
+    <footer>
+        <div class="info">
+
+            <div class="contact-us">
+
+                <span class="article-title">
+                    Contact us
+                </span>
+
+                <div class="article-content">
+                    <div class="telephone">
+                        <span class="contact-icon"></span>
+                        <span>
+                            +375(29) 634 05 15
+                        </span>
+                    </div>
+                    <div class="mail">
+                        <span class="contact-icon"></span>
+                        <span>
+                            info@mail.ru
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="links">
+                <span class="article-title">
+                    Links
+                </span>
+
+                <div class="article-content">
+
+                   <div class="icons-resource">
+                        Icons made by 
+                        <a href="https://www.flaticon.com/" title="Flaticon" target="blank"> 
+                            www.flaticon.com
+                        </a>
+                   </div>
+
+                   <div class="icons-resource">
+                        Used library
+                        <a href="https://highlightjs.org/" title="Highlight.js" target="blank"> 
+                            www.highlightjs.org
+                        </a>
+                   </div>
+
+                   <div class="university">
+                        <a href="http://www.belstu.by/"
+                        title="Перейти на сайт БГТУ" target="blank">
+                            BSTU
+                        </a>
+                   </div>
+                    
+                </div>
+            </div>
+
+            <div class="about">
+                <span class="article-title">
+                    About
+                </span>
+
+                <div class="article-content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit laboriosam assumenda sequi vero nulla saepe dolorem harum, quae atque aut quod exercitationem quibusdam eligendi similique animi culpa repellendus quis unde minus! Eveniet, unde facere aut ab ullam quis beatae non eligendi ut odio. Recusandae odio rem in, iure voluptatibus doloremque!
+                </div>
+            </div>
+
+        </div>
+
+        <div class="rights">
+            Copyright &#169; 2021, created by
+            <a href="https://vk.com/sashadobriyan" class="vk-link" target="blank">
+                Z1FiR
+            </a>
+        </div>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="../../main.script.js"></script>
+
+</body>
+</html>

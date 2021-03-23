@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../../main.style.css">
+    <link rel="stylesheet" href="../../java-script/lw-pages/lw-styles/question.css">
+    <link rel="stylesheet" href="../../java-script/code-template.css">
+    <link rel="icon" type="image/x-icon" href="../icons/xml.svg">
+
+    <link rel="stylesheet" href="../../../../Modules/highlight/styles/stackoverflow-light.css">
+    <script src="../../../../Modules/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <title>XML</title>
+</head>
+
+<body>
+
+    <div class="toTop">
+        <a href="#top" class="anchor" title="Наверх"></a>
+    </div>
+
+    <button class="open-menu" onclick="openMenu()"></button>
+    
+    <header id="top">
+        <div class="practice">
+            <a href="../../../../Практикум_КЯР_2019/index.html" target="blank" title="Перейти к практикуму"></a>
+        </div>
+
+        <div class="home">
+            <a href="../../../main.page.html" title="Home"></a>
+        </div>
+    </header>
+
+    <div class="head">
+        <div class="content">
+            <span class="page-title">
+                Лабораторная работа 6
+            </span>
+            <div class="description">
+                Знакомство с <span class="lang">SVG</span>-графикой. Рисование <span class="lang">SVG</span>-фигур
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="main-content">
+
+            <span class="title">Цель работы</span>
+            <div class="introduction">
+                Изучить способы вставки SVG-изображения на web-страницу, принципы создания svg-фигур и svg-контуров; познакомиться с правилами применения трансформации и градиентной заливки к фигурам.
+            </div>
+
+            <span class="title">Задания</span>
+            <div class="questions">
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 1</span>
+                        <div class="question-describe">
+                            Создайте на <strong>html</strong>-страничке svg-изображение с использованием различных примитивов, <strong>заливок</strong> <em>(fill)</em> и <strong>обводок</strong> <em>(stroke)</em>, нарисуйте фигуры с наложением и примените <strong>прозрачность</strong> <em>(fill-opacity)</em>. 
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">Решение</span>
+
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">SVG</span>
+                            
+                            <pre><code class="svg">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    &lt;ellipse rx="110" ry="30" cx="111" cy="31" fill="coral" stroke="red" 
+        fill-opacity=".2" stroke-opacity=".2" stroke-width="3"/>
+    &lt;rect width="130" height="80" x="110" y="12" fill="coral" stroke="red" 
+        fill-opacity=".2" stroke-opacity=".2" stroke-width="3"/>
+&lt;/svg></code></pre>
+
+                        </div>
+
+                        <input type="button" value="Выполнить код" title="Запустить программу" class="new-doc-btn">
+
+                        <div class="new-document-area">
+                            <img src="../icons/lw6-1.svg" height="100%">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 2</span>
+                        <div class="question-describe">
+                            Примените трансформацию к отдельным примитивам.
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">Решение</span>
+
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">SVG</span>
+                            
+                            <pre><code class="svg">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    &lt;ellipse rx="110" ry="30" cx="111" cy="31" transform="rotate(-30 212 32)" fill="coral" 
+        stroke="red" fill-opacity=".2" stroke-opacity=".2" stroke-width="3"/>
+    &lt;rect width="130" height="80" x="110" y="12" transform="skewX(40)" fill="coral" 
+        stroke="red" fill-opacity=".2" stroke-opacity=".2" stroke-width="3"/>
+&lt;/svg></code></pre>
+
+                        </div>
+
+                        <input type="button" value="Выполнить код" title="Запустить программу" class="new-doc-btn">
+
+                        <div class="new-document-area">
+                            <img src="../icons/lw6-2.svg" width="45%" height="100%">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 3</span>
+                        <div class="question-describe">
+                            Примените градиентную заливку к отдельным фигурам.
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">Решение</span>
+
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">SVG</span>
+                            
+                            <pre><code class="svg">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    &lt;defs>
+        &lt;linearGradient id="MyGradient">
+            &lt;stop offset="30%" stop-color="coral"/>
+            &lt;stop offset="70%" stop-color="orange"/>
+        &lt;/linearGradient>
+    &lt;/defs>
+
+    &lt;ellipse rx="110" ry="30" cx="112" cy="32" transform="rotate(-30 212 32)" fill="url(#MyGradient)" 
+        stroke="red" fill-opacity=".6" stroke-opacity=".2" stroke-width="3"/>
+    &lt;rect width="130" height="80" x="110" y="12" transform="skewX(40)" fill="url(#MyGradient)" 
+        stroke="red" fill-opacity=".4" stroke-opacity=".2" stroke-width="3"/>
+&lt;/svg></code></pre>
+
+                        </div>
+
+                        <input type="button" value="Выполнить код" title="Запустить программу" class="new-doc-btn">
+
+                        <div class="new-document-area">
+                            <img src="../icons/lw6-3.svg" width="45%" height="100%">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 4</span>
+                        <div class="question-describe">
+                            Создайте новый <strong>html</strong> файл с <strong>svg</strong>-изображением. Скопируйте <strong>svg</strong>-код любой иконки <em>(см. выше)</em> в раздел <strong>defs</strong>. Разместите этот контур не менее 5-ти раз на страничке при помощи тега <strong>use</strong> <em>(в теге use указывается <strong>id</strong> контура, прописываются его координаты и при необходимости трансформация)</em>. Задайте различные <strong>CSS</strong>-стили и примените их к контурам. 
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">Решение</span>
+
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">SVG</span>
+                            
+                            <pre><code class="svg">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    &lt;style>
+        .fill-1{
+            fill: coral
+        }
+
+        .fill-2{
+            fill: lightblue
+        }
+
+        .fill-3{
+            fill: wheat
+        }
+    &lt;/style>
+
+    &lt;defs>
+        &lt;path id="bubble" d="M50 6.25c27.614 0 50 18.188 50 40.625 0 22.437-22.386 
+        40.625-50 40.625-2.652 0-5.255-0.169-7.795-0.493-10.74 10.74-23.56 12.666-35.955 
+        12.949v-2.629c6.693-3.279 12.5-9.252 12.5-16.078 0-0.953-0.074-1.888-0.211-2.802-
+        11.308-7.448-18.539-18.824-18.539-31.573 0-22.437 22.386-40.625 50-40.625z"/>
+    &lt;/defs>
+
+    &lt;use href="#bubble" class="fill-1" x="0" y="10"/>
+    &lt;use href="#bubble" class="fill-2" x="120" y="10"/>
+    &lt;use href="#bubble" class="fill-3" x="240" y="10"/>
+&lt;/svg></code></pre>
+
+                        </div>
+
+                        <input type="button" value="Выполнить код" title="Запустить программу" class="new-doc-btn">
+
+                        <div class="new-document-area">
+                            <img src="../icons/lw6-4.svg" width="40%" height="100%">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 5</span>
+                        <div class="question-describe">
+                            Примените трансформацию и измените размер отдельных экземпляров иконок. 
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">Решение</span>
+
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">SVG</span>
+                            
+                            <pre><code class="svg">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    &lt;style>
+        .fill-1{
+            fill: coral
+        }
+
+        .fill-2{
+            fill: lightblue
+        }
+
+        .fill-3{
+            fill: wheat
+        }
+    &lt;/style>
+
+    &lt;defs>
+        &lt;path id="bubble" d="M50 6.25c27.614 0 50 18.188 50 40.625 0 22.437-22.386 
+        40.625-50 40.625-2.652 0-5.255-0.169-7.795-0.493-10.74 10.74-23.56 12.666-35.955 
+        12.949v-2.629c6.693-3.279 12.5-9.252 12.5-16.078 0-0.953-0.074-1.888-0.211-2.802-
+        11.308-7.448-18.539-18.824-18.539-31.573 0-22.437 22.386-40.625 50-40.625z"/>
+    &lt;/defs>
+
+    &lt;use href="#bubble" class="fill-1" x="0" y="30" transform="scale(1.1 .8)"/>
+    &lt;use href="#bubble" class="fill-2" x="90" y="10" transform="scale(1.5 .8)"/>
+    &lt;use href="#bubble" class="fill-3" x="160" y="10" transform="scale(2 .5)"/>
+&lt;/svg></code></pre>
+
+                        </div>
+
+                        <input type="button" value="Выполнить код" title="Запустить программу" class="new-doc-btn">
+
+                        <div class="new-document-area">
+                            <img src="../icons/lw6-5.svg" width="60%" height="100%">
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+            
+
+            <div class="goto-page">
+                <div class="previous">
+                    <a href="lw5.html" class="previous-img" title="К предыдущей лабораторной">
+                        <img src="../../java-script/icons/left-arrow.svg">
+                    </a>
+                    <span  class="previous-lw">
+                        Предыдущая лабораторная
+                    </span>
+                </div>
+                <div class="next" title="К следующей лабораторной">
+                    <span class="next-lw">
+                        Следующая лабораторная
+                    </span>
+                    <a href="lw7.html" class="next-img">
+                        <img src="../../java-script/icons/right-arrow.svg">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <nav>
+            <button class="close-menu" onclick="closeMenu()"></button>
+            <div class="container">
+                <div class="menu">
+    
+                    <div class="item watch">
+                        <a href="../../../main.page.html" class="sub-title" title="Перейти к разделу">
+                            Главная
+                        </a>
+                    </div>
+    
+                    <div class="item watch">
+                        <a href="../../html-css/html&css-page.html" class="sub-title" title="Перейти к разделу">HTML5</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="../../html-css/lw-pages/lw1.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="../../html-css/lw-pages/lw2.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../html-css/lw-pages/lw3.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="item watch">
+                        <a href="../../java-script/js-page.html" class="sub-title">JavaScript</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/first-lw.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/second-lw.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/third-lw.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/fourth-lw.html" class="sub-item">
+                                    Лабораторная работа 4
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/fifth-lw.html" class="sub-item">
+                                    Лабораторная работа 5
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/sixth-lw.html" class="sub-item">
+                                    Лабораторная работа 6
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/seventh-lw.html" class="sub-item">
+                                    Лабораторная работа 7
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/eighth-lw.html" class="sub-item">
+                                    Лабораторная работа 8
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/ninth-lw.html" class="sub-item">
+                                    Лабораторная работа 9
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/tenth-lw.html" class="sub-item">
+                                    Лабораторная работа 10
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="item current">
+                        <a href="../xml-page.html" class="sub-title current-title" title="Перейти к разделу">XML</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="lw1.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="lw2.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw3.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw4.html" class="sub-item">
+                                    Лабораторная работа 4
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw5.html" class="sub-item">
+                                    Лабораторная работа 5
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw6.html" class="sub-item current-lw">
+                                    Лабораторная работа 6
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw7.html" class="sub-item">
+                                    Лабораторная работа 7
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw8.html" class="sub-item">
+                                    Лабораторная работа 8
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </nav>
+
+    </main>
+
+    <footer>
+        <div class="info">
+
+            <div class="contact-us">
+
+                <span class="article-title">
+                    Contact us
+                </span>
+
+                <div class="article-content">
+                    <div class="telephone">
+                        <span class="contact-icon"></span>
+                        <span>
+                            +375(29) 634 05 15
+                        </span>
+                    </div>
+                    <div class="mail">
+                        <span class="contact-icon"></span>
+                        <span>
+                            info@mail.ru
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="links">
+                <span class="article-title">
+                    Links
+                </span>
+
+                <div class="article-content">
+
+                   <div class="icons-resource">
+                        Icons made by 
+                        <a href="https://www.flaticon.com/" title="Flaticon" target="blank"> 
+                            www.flaticon.com
+                        </a>
+                   </div>
+
+                   <div class="icons-resource">
+                        Used library
+                        <a href="https://highlightjs.org/" title="Highlight.js" target="blank"> 
+                            www.highlightjs.org
+                        </a>
+                   </div>
+
+                   <div class="university">
+                        <a href="http://www.belstu.by/"
+                        title="Перейти на сайт БГТУ" target="blank">
+                            BSTU
+                        </a>
+                   </div>
+                    
+                </div>
+            </div>
+
+            <div class="about">
+                <span class="article-title">
+                    About
+                </span>
+
+                <div class="article-content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit laboriosam assumenda sequi vero nulla saepe dolorem harum, quae atque aut quod exercitationem quibusdam eligendi similique animi culpa repellendus quis unde minus! Eveniet, unde facere aut ab ullam quis beatae non eligendi ut odio. Recusandae odio rem in, iure voluptatibus doloremque!
+                </div>
+            </div>
+
+        </div>
+
+        <div class="rights">
+            Copyright &#169; 2021, created by
+            <a href="https://vk.com/sashadobriyan" class="vk-link" target="blank">
+                Z1FiR
+            </a>
+        </div>
+    </footer>
+
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script> -->
+    <!-- <script src="lw-scripts/first-lw.js"></script> -->
+    <script src="../../../main.script.js"></script>
+    <script>
+        const newDocBtn = document.querySelectorAll('.new-doc-btn')
+        const newDoc = document.querySelectorAll('.new-document-area')
+
+        newDocBtn[0].onclick = () => {
+            if(!(newDoc[0].classList.contains("new-document-area-active"))){
+                // применяем стили к документу
+                newDoc[0].innerHTML += ('<style>' 
+                    + '.new-document-area-active {background: #f8f8f8; color: #333; font-size: 16px; font-family: Courier, monospace; margin: 0; height: 20vh;}</style>')
+            
+                newDoc[0].classList.add("new-document-area-active")
+            }
+            else{
+                newDoc[0].classList.remove("new-document-area-active")
+            }
+        }
+
+        newDocBtn[1].onclick = () => {
+            if(!(newDoc[1].classList.contains("new-document-area-active"))){
+                // применяем стили к документу
+                newDoc[1].innerHTML += ('<style>' 
+                    + '.new-document-area-active {background: #f8f8f8; color: #333; font-size: 16px; font-family: Courier, monospace; margin: 0; height: 30vh;}</style>')
+            
+                newDoc[1].classList.add("new-document-area-active")
+            }
+            else{
+                newDoc[1].classList.remove("new-document-area-active")
+            }
+        }
+
+        newDocBtn[2].onclick = () => {
+            if(!(newDoc[2].classList.contains("new-document-area-active"))){
+                // применяем стили к документу
+                newDoc[2].innerHTML += ('<style>' 
+                    + '.new-document-area-active {background: #f8f8f8; color: #333; font-size: 16px; font-family: Courier, monospace; margin: 0; height: 30vh;}</style>')
+            
+                newDoc[2].classList.add("new-document-area-active")
+            }
+            else{
+                newDoc[2].classList.remove("new-document-area-active")
+            }
+        }
+
+        newDocBtn[3].onclick = () => {
+            if(!(newDoc[3].classList.contains("new-document-area-active"))){
+                // применяем стили к документу
+                newDoc[3].innerHTML += ('<style>' 
+                    + '.new-document-area-active {background: #f8f8f8; color: #333; font-size: 16px; font-family: Courier, monospace; margin: 0; height: 30vh;}</style>')
+            
+                newDoc[3].classList.add("new-document-area-active")
+            }
+            else{
+                newDoc[3].classList.remove("new-document-area-active")
+            }
+        }
+
+        newDocBtn[4].onclick = () => {
+            if(!(newDoc[4].classList.contains("new-document-area-active"))){
+                // применяем стили к документу
+                newDoc[4].innerHTML += ('<style>' 
+                    + '.new-document-area-active {background: #f8f8f8; color: #333; font-size: 16px; font-family: Courier, monospace; margin: 0; height: 30vh;}</style>')
+            
+                newDoc[4].classList.add("new-document-area-active")
+            }
+            else{
+                newDoc[4].classList.remove("new-document-area-active")
+            }
+        }
+    </script>
+
+</body>
+</html>

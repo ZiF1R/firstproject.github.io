@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lw4.xslt"?>
+<students>
+    <student>
+        <last-name>Добриян</last-name>
+        <name>Александр</name>
+        <patronymic>Витальевич</patronymic>
+        <average-mark>6</average-mark>
+        <birth>2003</birth>
+    </student>
+
+    <student>
+        <last-name>Добриян</last-name>
+        <name>Александр</name>
+        <patronymic>Витальевич</patronymic>
+        <average-mark>4</average-mark>
+        <birth>2001</birth>
+    </student>
+
+    <student>
+        <last-name>Добриян</last-name>
+        <name>Александр</name>
+        <patronymic>Витальевич</patronymic>
+        <average-mark>6</average-mark>
+        <birth>2002</birth>
+    </student>
+
+    <student>
+        <last-name>Добриян</last-name>
+        <name>Александр</name>
+        <patronymic>Витальевич</patronymic>
+        <average-mark>7</average-mark>
+        <birth>2002</birth>
+    </student>
+
+    <student>
+        <last-name>Добриян</last-name>
+        <name>Александр</name>
+        <patronymic>Витальевич</patronymic>
+        <average-mark>9</average-mark>
+        <birth>2003</birth>
+    </student>
+
+    <student>
+        <last-name>Добриян</last-name>
+        <name>Александр</name>
+        <patronymic>Витальевич</patronymic>
+        <average-mark>5</average-mark>
+        <birth>2004</birth>
+    </student>
+</students>

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../../main.style.css">
+    <link rel="stylesheet" href="lw-styles/question.css">
+    <link rel="stylesheet" href="../code-template.css">
+    <link rel="icon" type="image/x-icon" href="../icons/java-script.svg">
+
+    <!-- 
+        ../../../../Modules/highlight/styles/monokai-sublime.css
+     -->
+
+    <link rel="stylesheet" href="../../../../Modules/highlight/styles/stackoverflow-light.css">
+    <script src="../../../../Modules/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <title>Java Script</title>
+</head>
+
+<body>
+
+    <div class="toTop">
+        <a href="#top" class="anchor" title="Наверх"></a>
+    </div>
+
+    <button class="open-menu" onclick="openMenu()"></button>
+    
+    <header id="top">
+        <div class="practice">
+            <a href="../../../../Практикум_КЯР_2019/index.html" target="blank" title="Перейти к практикуму"></a>
+        </div>
+
+        <div class="home">
+            <a href="../../../main.page.html" title="Home"></a>
+        </div>
+    </header>
+
+    <div class="head">
+        <div class="content">
+            <span class="page-title">
+                Лабораторная работа 1
+            </span>
+            <div class="description">
+                Арифметические, логические операторы, операторы сравнения в <span class="lang">JavaScript</span>.
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="main-content">
+
+            <span class="title">Цель работы</span>
+            <div class="introduction">
+                Изучить возможности ввода и вывода данных; особенности использования арифметических, логических операторов, операторов сравнения, операторов условного перехода.
+            </div>
+
+            <span class="title">Задания</span>
+            <div class="questions">
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 1</span>
+                        <div class="question-describe">
+                            Опробовать работу с модальными окнами <strong>alert, prompt, confirm</strong>. Разработать свой диалог с использованием этих команд. Пример
+                            диалога:<br>
+                            <strong>1)</strong> вывести приветствие в окне <strong>alert</strong> <em>“Вас приветствует учебный центр”</em>;<br>
+                            <strong>2)</strong> затем в окне <strong>prompt</strong> вывести сообщение 
+                            <em>«Введите имя»</em>, а в окне <strong>alert</strong> 
+                            вывести сообщение <em>«Добро пожаловать на наши курсы, <strong>имя</strong>»</em>;<br>
+                            <strong>3)</strong> в окне <strong>confirm</strong> вывести сообщение <em>"Хотите стать Web-дизайнером?"</em>
+                            с альтернативными ответами в окнах <strong>alert</strong>, если <strong>true</strong>, то <em>"Учите стили CSS и JavaScript!"</em>, если <strong>false</strong> то <em>"Упускаете время!"</em>.
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">Решение</span>
+
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">Java Script</span>
+                            
+                            <pre><code class="JavaScript">alert("Вас приветствует учебный центр")
+alert ("Добро пожаловать на наши курсы, " + (prompt ('Введите имя', 'Имя') || 'Имя'))
+
+let answer = confirm("Хотите стать Web-дизайнером?")
+if(answer)
+    alert("Учите стили CSS и JavaScript!")
+else
+    alert("Упускаете время!")</code></pre>
+
+                        </div>
+
+                        <input type="button" value="Выполнить код" onclick="first_task()" title="Запустить программу">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 2</span>
+                        <div class="question-describe">
+                            Использование оператора <em>+</em> с числовыми и строковыми переменными.<br>
+                            <strong>1)</strong> 
+                            Сложить два любых числа <em>(например, 10 и 5)</em>. Результат вывести на
+                            страницу;<br>
+                            <strong>2)</strong> 
+                            Сложить две строки <em>(например, “10” и “5”)</em>. Результат вывести на
+                            страницу;<br>
+                            <strong>3)</strong> 
+                            Сложить число и строку <em>(например, 22 и “5”)</em>. Результат вывести на
+                            страницу;<br>
+                            <strong>4)</strong> 
+                            Сложить строку и число <em>(например, “22” и 5)</em>. Результат вывести на
+                            страницу;<br>
+                            <strong>5)</strong> 
+                            Вывод – <em>"Результатом сложения строки и числа всегда будет … "</em> –
+                            вывести в окно.
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">Решение</span>
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">Java Script</span>
+                            
+                            <pre><code class="JavaScript">document.write("1) 10 + 5 = " + (10 + 5))
+document.write("2) '10' + '5' = " + ("10" + "5"))
+document.write("3) 22 + '5' = " + (22 + "5"))
+document.write("4) '22' + 5 = " + ("22" + 5))
+document.write("Вывод: результатом сложения строки и числа всегда будет строка.")</code></pre>
+
+                        </div>
+
+                        <input type="button" value="Выполнить код" title="Запустить программу" class="new-doc-btn">
+
+                        <div class="new-document-area">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 3</span>
+                        <div class="question-describe">
+                            Найти значение 2-х любых арифметических выражений, записанных на <em>JS</em> с использованием арифметических операций<em>, например: (35y-25x)/5+232 и (8*y/x+5*x/y – 43)*6</em><br>Значения <strong>x</strong> и <strong>y</strong> задать произвольно, но подобрать такие, чтоб значение одного выражения было намного больше второго. Найти остаток от деления значения одного выражения на значение другого. Вывести результаты на страницу, а также в отдельное окно.
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">Решение</span>
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">Java Script</span>
+                            
+                            <pre><code class="JavaScript">let x = 1, y = 12
+
+let firstExpr = ((35*y) - (25*x) / (5 + 232))
+let secondExpr = ((8*y / x) + (5*x / y) - 43)*6
+let result = Math.round(secondExpr) % Math.round(firstExpr)
+
+alert("Результат первого выражения равен " + Math.round(firstExpr))
+alert("Результат второго выражения равен " + Math.round(secondExpr))
+alert("Остаток от деления второго выражения на первое равен " + result)
+
+document.write("Результат первого выражения " + Math.round(firstExpr))
+document.write("Результат второго выражения " + Math.round(secondExpr))
+document.write("Остаток от деления второго выражения на первое " + result)</code></pre>
+
+                        </div>
+
+                        <input type="button" value="Выполнить код" title="Запустить программу" class="new-doc-btn">
+
+                        <div class="new-document-area">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 4</span>
+                        <div class="question-describe">
+                            Продемонстрировать использование операторов сравнения <em>(==, !=, >, >=, <, <=)</em> и логических операторов <em>(!, &&, ||)</em>.
+                            Введите любое число. Если оно меньше 20 или больше 40 и не равно 15 и делится без остатка на 5, то вывести сообщение <em>«Правильное начение»</em>, иначе <em>«Не правильное значение»</em>.<br>
+                            Придумайте <strong>свой</strong> пример с логическими операторами.
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">Решение</span>
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">Java Script</span>
+                            
+                            <pre><code class="JavaScript">let x = prompt('Введите число: ', '0')
+
+if(x) {
+    if(((x < 20) || (x > 40)) && ((x % 5) == 0) && (x != 15))
+        alert("Правильное значение")
+    else
+        alert("Не правильное значение")
+}
+else
+    alert("В поле необходимо что-то ввести!")
+                             
+let y = prompt('Введите число, квадрат которого больше 144: ', '0')
+                             
+if(y) {
+    if((y * y) > 144)
+        alert("Правильно " + (y * y) + " > 144")
+    else
+        alert("Не правильно " + (y * y) + " <= 144")
+}
+else
+    alert("В поле необходимо что-то ввести!")</code></pre>
+
+                        </div>
+
+                        <input type="button" value="Выполнить код" onclick="fourth_task()" title="Запустить программу">
+                    </div>
+                    
+                </div>
+
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 5</span>
+                        <div class="question-describe">
+                            Конструкция <strong>if..elseif..else</strong>.<br>
+                            Ввести 2 числа с клавиатуры. Сравнить их и вывести сообщение на страницу, например <em>“А больше Б”</em>, используя конструкцию <strong>if..elseif..else</strong>. <br>
+                            Написать свой пример с использованием альтернативного синтаксиса
+                            конструкции <em>if..else</em> - <br><strong>(условие) ? команды1 : команды2</strong>.
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">Решение</span>
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">Java Script</span>
+                            
+                            <pre><code class="JavaScript">let x = prompt('Введите первое число: ', '0')
+let y = prompt('Введите второе число: ', '0')
+                             
+// чтобы все правильно работало
+// преобразуем полученные строки в числа
+x = Number.parseInt(x)
+y = Number.parseInt(y)
+                             
+if(x > y)
+    alert(x + " > " + y)
+else if(x < y)
+    alert(x + " < " + y)
+else
+    alert(x + " = " + y)
+                             
+let mark = prompt('Что вы получили за экзамен по ОИТ?', '0')
+mark = Number.parseInt(mark);
+                             
+(mark < 1 || mark > 10) ? alert("Введите корректную оценку!") : ( (mark > 3) ? alert("Поздравляю, у Вас зачет!") : alert("К сожалению, у Вас незачёт!"))</code></pre>
+
+                        </div>
+
+                        <input type="button" value="Выполнить код" onclick="fifth_task()" title="Запустить программу">
+                    </div>
+                    
+                </div>
+
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 6</span>
+                        <div class="question-describe">
+                            Определить, какой сегодня день недели (использовать конструкцию <strong>switch case</strong>).
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">Решение</span>
+
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">Java Script</span>
+                            
+                            <pre><code class="JavaScript">let answer = +prompt('Какой сегодня день:', '1')
+
+let currentDay = answer % 7
+
+switch(currentDay){
+    case 1: alert("Понедельник"); break
+    case 2: alert("Вторник"); break
+    case 3: alert("Среда"); break
+    case 4: alert("Четверг"); break
+    case 5: alert("Пятница"); break
+    case 6: alert("Суббота"); break
+    case 0: alert("Воскресенье"); break
+    default: alert("Некорректный день!"); break
+}</code></pre>
+
+                        </div>
+
+                        <input type="button" value="Выполнить код" onclick="sixth_task()" title="Запустить программу">
+                    </div>
+                    
+                </div>
+
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 7*</span>
+                        <div class="question-describe">
+                            Придумать пример, демонстрирующий обработку исключений с использованием конструкции <strong>try … catch</strong>.
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">
+                            Решение
+                        </span>
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">Java Script</span>
+                                
+                            <pre><code class="JavaScript">alert("Эта программа покажет работу конструкции try...catch!")
+
+const x = 12
+alert("Определим константную переменную 'x' = " + x)
+                             
+let y = (x*x + 2) / (12 - 1) * 5 * x
+alert("Рассчитаем значение данного выражения:"
+    + "\n(x^2 + 2) / (12 - 1) * 5 * x = " + Math.round(y))
+                                
+alert("Попробуем присвоить 'x' другое значение и пересчитать выражение.")
+try {
+    x = 131 // ошибка
+                             
+    // последующие строчки в этом блоке не сработают
+    // потому что пытаясь переопределить константу
+    // мы получим ошибку и программа дальше не будет выполняться 
+    alert("x = " + x)
+                             
+    y = (x*x + 2) / (12 - 1)*5*x
+    alert("(x^2 + 2) / (12 - 1)*5*x = " + Math.round(y))
+} 
+catch (error) {
+    alert("Попытались переопределить константу, тем самым вызвав ошибку.\n"
+    + "Текст ошибки -> " + error)
+}
+finally{
+    alert("Вывод: каждый раз, когда мы будем переопределять константу, "
+    + "программа будет выдавать ошибку и прекращать свое выполнение, будьте осторожнее!")
+}
+</code></pre>
+        
+                        </div>
+
+                        <input type="button" value="Выполнить код" onclick="seventh_task()" title="Запустить программу">
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="goto-page">
+                <div class="next" title="К следующей лабораторной">
+                    <span class="next-lw">
+                        Следующая лабораторная
+                    </span>
+                    <a href="second-lw.html" class="next-img">
+                        <img src="../icons/right-arrow.svg">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <nav>
+            <button class="close-menu" onclick="closeMenu()"></button>
+            <div class="container">
+                <div class="menu">
+    
+                    <div class="item watch">
+                        <a href="../../../main.page.html" class="sub-title" title="Перейти к разделу">
+                            Главная
+                        </a>
+                    </div>
+    
+                    <div class="item watch">
+                        <a href="../../html-css/html&css-page.html" class="sub-title" title="Перейти к разделу">HTML5</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="../../html-css/lw-pages/lw1.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="../../html-css/lw-pages/lw2.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../html-css/lw-pages/lw3.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="item current">
+                        <a href="../../java-script/js-page.html" class="sub-title current-title">JavaScript</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="first-lw.html" class="sub-item current-lw">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="second-lw.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="third-lw.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="fourth-lw.html" class="sub-item">
+                                    Лабораторная работа 4
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="fifth-lw.html" class="sub-item">
+                                    Лабораторная работа 5
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="sixth-lw.html" class="sub-item">
+                                    Лабораторная работа 6
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="seventh-lw.html" class="sub-item">
+                                    Лабораторная работа 7
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="eighth-lw.html" class="sub-item">
+                                    Лабораторная работа 8
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="ninth-lw.html" class="sub-item">
+                                    Лабораторная работа 9
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="tenth-lw.html" class="sub-item">
+                                    Лабораторная работа 10
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="item watch">
+                        <a href="../../xml/xml-page.html" class="sub-title" title="Перейти к разделу">XML</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw1.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw2.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw3.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw4.html" class="sub-item">
+                                    Лабораторная работа 4
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw5.html" class="sub-item">
+                                    Лабораторная работа 5
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw6.html" class="sub-item">
+                                    Лабораторная работа 6
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw7.html" class="sub-item">
+                                    Лабораторная работа 7
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../xml/lw-pages/lw8.html" class="sub-item">
+                                    Лабораторная работа 8
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </nav>
+
+    </main>
+
+    <footer>
+        <div class="info">
+
+            <div class="contact-us">
+
+                <span class="article-title">
+                    Contact us
+                </span>
+
+                <div class="article-content">
+                    <div class="telephone">
+                        <span class="contact-icon"></span>
+                        <span>
+                            +375(29) 634 05 15
+                        </span>
+                    </div>
+                    <div class="mail">
+                        <span class="contact-icon"></span>
+                        <span>
+                            info@mail.ru
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="links">
+                <span class="article-title">
+                    Links
+                </span>
+
+                <div class="article-content">
+
+                   <div class="icons-resource">
+                        Icons made by 
+                        <a href="https://www.flaticon.com/" title="Flaticon" target="blank"> 
+                            www.flaticon.com
+                        </a>
+                   </div>
+
+                   <div class="icons-resource">
+                        Used library
+                        <a href="https://highlightjs.org/" title="Highlight.js" target="blank"> 
+                            www.highlightjs.org
+                        </a>
+                   </div>
+
+                   <div class="university">
+                        <a href="http://www.belstu.by/"
+                        title="Перейти на сайт БГТУ" target="blank">
+                            BSTU
+                        </a>
+                   </div>
+                    
+                </div>
+            </div>
+
+            <div class="about">
+                <span class="article-title">
+                    About
+                </span>
+
+                <div class="article-content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit laboriosam assumenda sequi vero nulla saepe dolorem harum, quae atque aut quod exercitationem quibusdam eligendi similique animi culpa repellendus quis unde minus! Eveniet, unde facere aut ab ullam quis beatae non eligendi ut odio. Recusandae odio rem in, iure voluptatibus doloremque!
+                </div>
+            </div>
+
+        </div>
+
+        <div class="rights">
+            Copyright &#169; 2021, created by
+            <a href="https://vk.com/sashadobriyan" class="vk-link" target="blank">
+                Z1FiR
+            </a>
+        </div>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="lw-scripts/first-lw.js"></script>
+    <script src="../../../main.script.js"></script>
+
+</body>
+</html>

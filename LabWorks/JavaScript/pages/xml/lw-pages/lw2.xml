@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-stylesheet type="text/css" href="../styles/lw2.css"?> -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="content">
+        <xs:element name="table">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="speciality" type="xs:string">
+                        Сsпециальность: ДЭиВИ
+                    </xs:element>
+
+                    <xs:element name="head">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="university" type="xs:string">Университет</xs:element>
+
+                                <xs:element name="points">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="title" type="xs:string">Проходной балл</xs:element>
+                                            <xs:element name="budget" type="xs:string">Бюджет</xs:element>
+                                            <xs:element name="pay" type="xs:string">Платное</xs:element>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+
+                                <xs:element name="set">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="title" type="xs:string">План приёма</xs:element>
+                                            <xs:element name="budget" type="xs:string">Бюджет</xs:element>
+                                            <xs:element name="pay" type="xs:string">Платное</xs:element>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+
+                                <xs:element name="city" type="xs:string">Город</xs:element>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+
+                    <xs:element name="info">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="university" type="xs:string">БГТУ</xs:element>
+
+                                <xs:element name="points">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="budget" type="xs:string">312</xs:element>
+                                            <xs:element name="pay" type="xs:string">262</xs:element>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+
+                                <xs:element name="set">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="budget" type="xs:string">25</xs:element>
+                                            <xs:element name="pay" type="xs:string">35</xs:element>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+
+                                <xs:element name="city" type="xs:string">Минск</xs:element>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>            
+        </xs:element>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../styles/style.css"?>
+<content>
+    <table>
+        <speciality>
+            Специальность: ДЭиВИ
+        </speciality>
+
+        <head>
+            <university>Университет</university>
+
+            <points>
+                <title>Проходной балл</title>
+                <budget>Бюджет</budget>
+                <pay>Платное</pay>
+            </points>
+
+            <set>
+                <title>План приёма</title>
+                <budget>Бюджет</budget>
+                <pay>Платное</pay>
+            </set>
+
+            <city>Город</city>
+        </head>
+
+        <info>
+            <university>БГТУ</university>
+
+            <points>
+                <budget>312</budget>
+                <pay>262</pay>
+            </points>
+
+            <set>
+                <budget>25</budget>
+                <pay>35</pay>
+            </set>
+
+            <city>Минск</city>
+        </info>
+
+        <info>
+            <university>БГТУ</university>
+
+            <points>
+                <budget>312</budget>
+                <pay>262</pay>
+            </points>
+
+            <set>
+                <budget>25</budget>
+                <pay>35</pay>
+            </set>
+
+            <city>Минск</city>
+        </info>
+
+        <info>
+            <university>БГТУ</university>
+
+            <points>
+                <budget>312</budget>
+                <pay>262</pay>
+            </points>
+
+            <set>
+                <budget>25</budget>
+                <pay>35</pay>
+            </set>
+
+            <city>Минск</city>
+        </info>
+
+        <info>
+            <university>БГТУ</university>
+
+            <points>
+                <budget>312</budget>
+                <pay>262</pay>
+            </points>
+
+            <set>
+                <budget>25</budget>
+                <pay>35</pay>
+            </set>
+
+            <city>Минск</city>
+        </info>
+
+        <info>
+            <university>БГТУ</university>
+
+            <points>
+                <budget>312</budget>
+                <pay>262</pay>
+            </points>
+
+            <set>
+                <budget>25</budget>
+                <pay>35</pay>
+            </set>
+
+            <city>Минск</city>
+        </info>
+        
+    </table>
+</content>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        #wrap{
+            position: relative;
+            width: 90%;
+            height: 65vh;
+            margin-top: 5vh;
+            border: 0.2vh solid #0000006b;
+            background-color: #f8f8f8;
+            overflow: hidden;
+        }
+    </style>
+
+    <title>Java Script</title>
+</head>
+<body>
+
+    <form style="display: flex;">
+        <fieldset>
+            <legend>Графики функций</legend>
+            <input type="radio" name="graph" id="square" value="1" checked>
+            y = x<sup>2</sup><br>
+            <input type="radio" name="graph" id="cube" value="2">
+            y = x<sup>3</sup><br>
+            <input type="radio" name="graph" id="sin" value="3">
+            y = sin(x)<br>
+            <input type="radio" name="graph" id="cos" value="4">
+            y = cos(x)<br>Выбрать цвет графика
+            <input type="color" class="graphColor">
+        </fieldset>
+    </form><br>
+    <input id="print" type="button" value="Принять">
+    <input id="clear" type="button" value="Очистить">
+
+    <div id="wrap">
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="test.js"></script>
+
+</body>
+</html>

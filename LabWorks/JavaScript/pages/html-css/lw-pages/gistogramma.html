@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../icons/canvas.svg">
+    <title>Canvas</title>
+</head>
+<body>
+
+    <!-- <img id="img" src="../icons/html.svg" width="30" height="30" style="display: none;"> -->
+    <canvas id="drawArea" width="1420" height="720" style="border: 1px solid #414141; color: #ff6537;"></canvas>
+
+    <script>
+        let canvas = document.getElementById("drawArea")
+        let drawArea = canvas.getContext("2d")
+        drawArea.beginPath()
+
+        // рисуем оси
+        drawArea.moveTo(100, 50)
+        drawArea.lineTo(100, 640)
+        drawArea.lineTo(1300, 640)
+
+        // рисуем стрелки для координатных осей
+        // для Оу
+        drawArea.moveTo(100, 50)
+        drawArea.lineTo(95, 60)
+
+        drawArea.moveTo(100, 50)
+        drawArea.lineTo(105, 60)
+
+        // для Ох
+        drawArea.moveTo(1300, 640)
+        drawArea.lineTo(1290, 635)
+
+        drawArea.moveTo(1300, 640)
+        drawArea.lineTo(1290, 645)
+
+        // добавляем подписи к осям
+        drawArea.font = '22px Arial'
+        drawArea.fillStyle = '#a5a5a5'
+        drawArea.fillText('Гистограмма 1, Время обучения в различных учебных заведениях', 370, 700)
+
+        drawArea.font = '18px Arial'
+        drawArea.fillStyle = '#000'
+        drawArea.fillText('Годы', 40, 50)
+        drawArea.fillText('Учебное заведение', 1200, 670)
+
+        // добавляем разметку на оси Оу и Ох
+        drawArea.moveTo(100, 640)
+        drawArea.strokeStyle = '#000'
+        drawArea.arc(100, 640, 3, 0, 6.3)
+        drawArea.fillText('0', 80, 660)
+
+        drawArea.moveTo(100, 540)
+        drawArea.arc(100, 540, 3, 0, 6.3)
+        drawArea.fillText('2', 80, 545)
+
+        drawArea.moveTo(100, 440)
+        drawArea.arc(100, 440, 3, 0, 6.3)
+        drawArea.fillText('4', 80, 445)
+
+        drawArea.moveTo(100, 340)
+        drawArea.arc(100, 340, 3, 0, 6.3)
+        drawArea.fillText('6', 80, 345)
+
+        drawArea.moveTo(100, 240)
+        drawArea.arc(100, 240, 3, 0, 6.3)
+        drawArea.fillText('8', 80, 245)
+
+        drawArea.moveTo(100, 140)
+        drawArea.arc(100, 140, 3, 0, 6.3)
+        drawArea.fillText('10', 70, 145)
+
+        drawArea.moveTo(100, 90)
+        drawArea.arc(100, 90, 3, 0, 6.3)
+        drawArea.fillText('11', 70, 95)
+
+        // добавляем обьекты на гистограмму
+        drawArea.fillStyle = '#ff6537'
+        drawArea.fillRect(200, 490, 200, 150)
+        drawArea.font = '20px Arial'
+        drawArea.fillStyle = '#fff'
+        drawArea.fillText('Детский сад', 245, 525)
+
+        let linearGradient = drawArea.createLinearGradient(200, 440, 400, 640)
+        linearGradient.addColorStop(0.0, 'coral')
+        linearGradient.addColorStop(1.0, 'orange')
+        drawArea.fillStyle = linearGradient
+        drawArea.fillRect(500, 90, 200, 550)
+        drawArea.fillStyle = '#fff'
+        drawArea.fillText('Школа', 568, 125)
+
+        let bg = new Image(50, 50);
+        bg.src = '../icons/les_favicon.png';
+        // drawArea.beginPath()
+        // let img = document.getElementById('img')
+        let imgGradient = drawArea.createPattern(bg, "repeat")
+        drawArea.fillStyle = imgGradient
+        drawArea.fillRect(800, 440, 200, 200)
+        // drawArea.closePath()
+
+        drawArea.fillStyle = '#fff'
+        drawArea.fillText('Университет', 845, 475)
+
+        // добавляем некоторые стили
+        drawArea.lineWidth = '3'
+        drawArea.lineCap = 'round'
+        drawArea.lineJoin = 'round'
+        drawArea.stroke()
+        // drawArea.fill()
+    </script>
+</body>
+</html>

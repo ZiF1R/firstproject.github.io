@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Java Script</title>
+</head>
+<body>
+
+    <textarea id="text1" style="position:absolute; top:10; left: 10; font-size: large; resize: none;" rows="5">Lorem ipsum</textarea>
+
+    <img id="img1" src="pages/java-script/icons/java-script.svg" style="position: absolute; left: 0; top: 0; width: 100px; height: 100px;">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        // для изображения
+        const img = $('#img1')
+        let canMoveImg = false
+
+        img.mousedown(() => dragImg())
+                                
+        function dragImg() {
+            canMoveImg = true
+        }
+                                                                        
+        img.on('mousemove', e => {
+            if(canMoveImg){
+                img.css('top', `${e.pageY - 50}px`)
+                img.css('left', `${e.pageX - 50}px`)
+            }
+        })
+                                                                        
+        img.mouseup(() => canMoveImg = false)
+                                
+        // для текстовой области
+        const text = $('#text1')
+        let canMoveText = false
+
+        text.mousedown(() => dragText())
+                                
+        function dragText() {
+            canMoveText = true
+        }
+                                                                        
+        text.on('mousemove', e => {
+            if(canMoveText){
+                text.css('top', `${e.pageY - 50}px`)
+                text.css('left', `${e.pageX - 50}px`)
+            }
+        })
+                                                                        
+        text.mouseup(() => canMoveText = false)
+    </script>
+
+</body>
+</html>

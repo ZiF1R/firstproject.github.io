@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../main.style.css">
+    <link rel="stylesheet" href="../java-script/code-template.css">
+    <link rel="icon" type="image/x-icon" href="icons/html.svg">
+
+    <link rel="stylesheet" href="../../../Modules/highlight/styles/stackoverflow-light.css">
+    <script src="../../../Modules/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <title>HTML5</title>
+</head>
+
+<body>
+
+    <div class="toTop">
+        <a href="#top" class="anchor" title="Наверх"></a>
+    </div>
+
+    <button class="open-menu" onclick="openMenu()"></button>
+    
+    <header id="top">
+        <div class="practice">
+            <a href="../../../Практикум_КЯР_2019/index.html" target="blank" title="Перейти к практикуму"></a>
+        </div>
+
+        <div class="home">
+            <a href="../../main.page.html" title="Home"></a>
+        </div>
+    </header>
+
+    <div class="head">
+        <div class="content">
+            <span class="page-title">
+                HTML5
+            </span>
+            <div class="description">
+                Лабораторные работы по 
+                <span class="lang">HTML5</span>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="main-content">
+
+            <span class="title">Введение</span>
+            <div class="introduction">
+                HTML5 – это новая версия HTML. Наиболее интересные нововведения HTML5:<br>
+                - поддержка видео и аудио (элементы video и audio);<br>
+                - возможности рисования на веб-страницах произвольных объектов
+                (элемент canvas);<br>
+                - улучшение форм (новые значения type для &lt;input> и множество новых
+                элементов и атрибутов);<br>
+                - добавление семантических тэгов, позволяющих сделать веб-страницы
+                более понятными для поисковых систем, браузеров и других программ и
+                устройств, читающих веб-страницы (элементы footer, header, nav, article и
+                др.);<br>
+                - DOM-хранилища – более функциональная альтернатива cookie.<br>
+                HTML5 содержит специальный тэг, позволяющий встраивать в веб-страницы видео файлы:
+                
+                <div class="code-temp">
+                    <span class="code-lang">HTML5</span>
+                    
+                    <pre><code class="html">&lt;video></code></pre>
+
+                </div>
+
+                Атрибут <strong>src</strong> тэга:
+                
+                <div class="code-temp">
+                    <span class="code-lang">HTML5</span>
+                    
+                    <pre><code class="html">&lt;audio></code></pre>
+
+                </div>
+                
+                позволяет указать путь
+                к видео файлу, атрибут <strong>controls</strong> отображает в плеере кнопки управления
+                видео, a атрибуты <strong>height</strong> (высота) и <strong>width</strong> (ширина) задают размеры плеера.
+                Например:
+
+                <div class="code-temp">
+                    <span class="code-lang">HTML5</span>
+                    
+                    <pre><code class="html">&lt;video src=video.ogv" width="300" height="200" controls="controls">&lt;/video></code></pre>
+
+                </div>
+
+                С помощью нового HTML5 элемента <em>&lt;audio></em> можно добавить на вебстраницу музыкальную композицию. Атрибут <strong>src</strong> тэга <em>&lt;audio></em> позволяет
+                указать путь к аудио файлу, а атрибут <strong>controls</strong> добавляет кнопки управления.
+                Например,
+
+
+                <div class="code-temp">
+                    <span class="code-lang">HTML5</span>
+                    
+                    <pre><code class="html">&lt;audio src="stop.ogv" controls="controls"> &lt;/audio></code></pre>
+
+                </div>
+
+            </div>
+
+            <span class="title">Лабораторные работы:</span>
+            <div class="sections">
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 1
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Создать новую веб-страницу. Вставит заголовок в центре
+                            страницы <em>«Я, ФИО, изучаю HTML5»</em>. Подсветить <em>ФИО</em> с помощью тега
+                            <em><strong>&lt;mark></strong></em>.<br><strong>Задание 2.</strong> 
+                            Вставить аудио и видео файлы.<br><strong>Задание 3.</strong> 
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/lw1.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 2
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Создайте гистограмму, используя элемент <strong>Canvas</strong>.<br>
+                            Порядок выполнения:<br>
+                            <strong>1.</strong> Создайте чистый лист для рисования. Определите функцию
+                            <em>(например, <strong>drawgist</strong>)</em>.<br>
+                            <strong>2.</strong> Используя moveTo() и lineTo(), начертите оси.<br>
+                            <strong>3.</strong> Используя fillText(), добавьте обозначения. Задайте тексту размер,
+                            начертание, шрифт.
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/lw2.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lw-section">
+
+                    <div class="line-effect"></div>
+                    <div class="section-title">
+                        Лабораторная работа 3
+                    </div>
+                    
+                    <div class="section-description">
+                        <span class="description-title">Задания</span>
+                        <div class="preview-text">
+                            <strong>Задание 1.</strong> Открыть свою веб-страницу, созданную в предыдущей
+                            работе. Создать на странице форму с новыми элементами и атрибутами,
+                            перечисленными выше.<br>
+                            <strong>Задание 2.</strong> Оформить страницу с помощью семантических тэгов: <strong>footer</strong>,
+                            <strong>header</strong>, <strong>nav</strong>. Тег footer должен содержать данные автора (ФИО, курс, группа,
+                            телефон и email). Телефон и email взять из соответствующих элементов
+                            формы.
+                        </div>
+                    </div>
+
+                    <div class="goto-wrap" title="Перейти к разделу">
+                        <a href="lw-pages/lw3.html" class="goto">
+                            Перейти
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+
+        <nav>
+            <button class="close-menu" onclick="closeMenu()"></button>
+            <div class="container">
+                <div class="menu">
+    
+                    <div class="item watch">
+                        <a href="../../main.page.html" class="sub-title" title="Перейти к разделу">
+                            Главная
+                        </a>
+                    </div>
+    
+                    <div class="item current">
+                        <a href="../html-css/html&css-page.html" class="sub-title current-title">HTML5</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="lw-pages/lw1.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="lw-pages/lw2.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw-pages/lw3.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="item watch">
+                        <a href="../java-script/js-page.html" class="sub-title" title="Перейти к разделу">JavaScript</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/first-lw.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/second-lw.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/third-lw.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/fourth-lw.html" class="sub-item">
+                                    Лабораторная работа 4
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/fifth-lw.html" class="sub-item">
+                                    Лабораторная работа 5
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/sixth-lw.html" class="sub-item">
+                                    Лабораторная работа 6
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/seventh-lw.html" class="sub-item">
+                                    Лабораторная работа 7
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/eighth-lw.html" class="sub-item">
+                                    Лабораторная работа 8
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/ninth-lw.html" class="sub-item">
+                                    Лабораторная работа 9
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../java-script/lw-pages/tenth-lw.html" class="sub-item">
+                                    Лабораторная работа 10
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="item watch">
+                        <a href="../xml/xml-page.html" class="sub-title" title="Перейти к разделу">XML</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw1.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw2.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw3.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw4.html" class="sub-item">
+                                    Лабораторная работа 4
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw5.html" class="sub-item">
+                                    Лабораторная работа 5
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw6.html" class="sub-item">
+                                    Лабораторная работа 6
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw7.html" class="sub-item">
+                                    Лабораторная работа 7
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../xml/lw-pages/lw8.html" class="sub-item">
+                                    Лабораторная работа 8
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </nav>
+
+    </main>
+
+    <footer>
+        <div class="info">
+
+            <div class="contact-us">
+
+                <span class="article-title">
+                    Contact us
+                </span>
+
+                <div class="article-content">
+                    <div class="telephone">
+                        <span class="contact-icon"></span>
+                        <span>
+                            +375(29) 634 05 15
+                        </span>
+                    </div>
+                    <div class="mail">
+                        <span class="contact-icon"></span>
+                        <span>
+                            info@mail.ru
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="links">
+                <span class="article-title">
+                    Links
+                </span>
+
+                <div class="article-content">
+
+                   <div class="icons-resource">
+                        Icons made by 
+                        <a href="https://www.flaticon.com/" title="Flaticon" target="blank"> 
+                            www.flaticon.com
+                        </a>
+                   </div>
+
+                   <div class="icons-resource">
+                        Used library
+                        <a href="https://highlightjs.org/" title="Highlight.js" target="blank"> 
+                            www.highlightjs.org
+                        </a>
+                   </div>
+
+                   <div class="university">
+                        <a href="http://www.belstu.by/"
+                        title="Перейти на сайт БГТУ" target="blank">
+                            BSTU
+                        </a>
+                   </div>
+                    
+                </div>
+            </div>
+
+            <div class="about">
+                <span class="article-title">
+                    About
+                </span>
+
+                <div class="article-content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit laboriosam assumenda sequi vero nulla saepe dolorem harum, quae atque aut quod exercitationem quibusdam eligendi similique animi culpa repellendus quis unde minus! Eveniet, unde facere aut ab ullam quis beatae non eligendi ut odio. Recusandae odio rem in, iure voluptatibus doloremque!
+                </div>
+            </div>
+
+        </div>
+
+        <div class="rights">
+            Copyright &#169; 2021, created by
+            <a href="https://vk.com/sashadobriyan" class="vk-link" target="blank">
+                Z1FiR
+            </a>
+        </div>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="../../main.script.js"></script>
+
+</body>
+</html>

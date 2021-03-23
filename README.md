@@ -1,0 +1,1 @@
+# [Открыть сайт](https://zif1r.github.io/laboratoryworks.github.io/LabWorks/JavaScript/main.page.html) | [Open site](https://zif1r.github.io/laboratoryworks.github.io/LabWorks/JavaScript/main.page.html) | [サイトを開く](https://zif1r.github.io/laboratoryworks.github.io/LabWorks/JavaScript/main.page.html)

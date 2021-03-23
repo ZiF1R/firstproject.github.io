@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="background: unset;">
+    <style>
+        .fill-1{
+            fill: coral
+        }
+
+        .fill-2{
+            fill: lightblue
+        }
+
+        .fill-3{
+            fill: wheat
+        }
+    </style>
+
+    <defs>
+        <path id="bubble" d="M50 6.25c27.614 0 50 18.188 50 40.625 0 22.437-22.386 40.625-50 40.625-2.652 0-5.255-0.169-7.795-0.493-10.74 10.74-23.56 12.666-35.955 12.949v-2.629c6.693-3.279 12.5-9.252 12.5-16.078 0-0.953-0.074-1.888-0.211-2.802-11.308-7.448-18.539-18.824-18.539-31.573 0-22.437 22.386-40.625 50-40.625z"/>
+    </defs>
+
+    <use href="#bubble" class="fill-1" x="0" y="10"/>
+    <use href="#bubble" class="fill-2" x="120" y="10"/>
+    <use href="#bubble" class="fill-3" x="240" y="10"/>
+</svg>

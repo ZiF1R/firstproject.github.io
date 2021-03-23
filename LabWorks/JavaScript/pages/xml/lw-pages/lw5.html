@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../../main.style.css">
+    <link rel="stylesheet" href="../../java-script/lw-pages/lw-styles/question.css">
+    <link rel="stylesheet" href="../../java-script/code-template.css">
+    <link rel="icon" type="image/x-icon" href="../icons/xml.svg">
+
+    <link rel="stylesheet" href="../../../../Modules/highlight/styles/stackoverflow-light.css">
+    <script src="../../../../Modules/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <title>XML</title>
+</head>
+
+<body>
+
+    <div class="toTop">
+        <a href="#top" class="anchor" title="Наверх"></a>
+    </div>
+
+    <button class="open-menu" onclick="openMenu()"></button>
+    
+    <header id="top">
+        <div class="practice">
+            <a href="../../../../Практикум_КЯР_2019/index.html" target="blank" title="Перейти к практикуму"></a>
+        </div>
+
+        <div class="home">
+            <a href="../../../main.page.html" title="Home"></a>
+        </div>
+    </header>
+
+    <div class="head">
+        <div class="content">
+            <span class="page-title">
+                Лабораторная работа 5
+            </span>
+            <div class="description">
+                Использование <span class="lang">XML DOM</span>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="main-content">
+
+            <span class="title">Задание</span>
+            <div class="questions">
+                <div>
+                    <div class="question">
+                        
+                        <span>Задание 1</span>
+                        <div class="question-describe">
+                            Составьте несколько <strong>XML</strong>-документов, в которых будет храниться информация о студентах. При помощи <strong>XML DOM</strong> выведите по 1-му любому из студентов.
+                        </div>
+    
+                    </div>
+
+                    <div class="solution">
+                        <span class="title"
+                        style="margin-bottom: 0;">Решение</span>
+
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">Html</span>
+                            
+                            <pre><code class="html">&lt;input type="file" value="Выбрать файл" id="fileChoose">
+&lt;input type="button" value="Показать информацию о студенте" id="print">
+&lt;div id="output">&lt;/div></code></pre>
+
+                        </div>
+
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">XML-1</span>
+                            
+                            <pre><code class="xml">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;?xml-stylesheet type="text/xsl" href="lw5.xslt"?>
+&lt;students>
+    &lt;student>
+        &lt;last-name>Добриян&lt;/last-name>
+        &lt;name>Александр&lt;/name>
+        &lt;patronymic>Витальевич&lt;/patronymic>
+        &lt;average-mark>7&lt;/average-mark>
+        &lt;birth>2002&lt;/birth>
+    &lt;/student>
+&lt;/students></code></pre>
+
+                        </div>
+
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">XML-2</span>
+                            
+                            <pre><code class="xml">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;?xml-stylesheet type="text/xsl" href="lw5.xslt"?>
+&lt;students>
+    &lt;student>
+        &lt;last-name>Добриян&lt;/last-name>
+        &lt;name>Александр&lt;/name>
+        &lt;patronymic>Витальевич&lt;/patronymic>
+        &lt;average-mark>6&lt;/average-mark>
+        &lt;birth>2003&lt;/birth>
+    &lt;/student>
+&lt;/students></code></pre>
+
+                        </div>
+
+                        <div class="code-temp" style="margin-bottom: 0;">
+                            <span class="code-lang">Java Script</span>
+                            
+                            <pre><code class="javascript">let xml
+
+let output = document.getElementById("output")
+let fileChoose = document.getElementById("fileChoose")
+let printButton = document.getElementById("print")
+fileChoose.addEventListener("change", readFile)
+printButton.addEventListener("click", print)
+                                
+function readFile() {
+    let files = fileChoose.files
+    let reader = new FileReader()
+    let file = files[0]
+    reader.readAsText(file)
+    reader.onload = function (e) {
+        xml = e.target.result
+    }
+}
+                                
+function print() {
+    if (window.DOMParser) {
+        parser = new DOMParser()
+        xmlDoc = parser.parseFromString(xml, "text/xml")
+    }
+    else {
+        xmlDoc = new ActiveXObject("Microsoft.XMLDOM")
+        xmlDoc.async = false
+        xmlDoc.loadXML(xml)
+    }
+
+    let lastName = xmlDoc.getElementsByTagName("last-name")
+    let name = xmlDoc.getElementsByTagName("name")
+    let patronymic = xmlDoc.getElementsByTagName("patronymic")
+    let averageMark = xmlDoc.getElementsByTagName("average-mark")
+    let birth = xmlDoc.getElementsByTagName("birth")
+    let newElement = document.createElement("div")
+                                
+    newElement.innerHTML = ( "Фамилия: " + lastName[0].innerHTML
+        + "&lt;br /> Имя : " + name[0].innerHTML 
+        + "&lt;br /> Отчество : " + patronymic[0].innerHTML
+        + "&lt;br /> Средний балл: " + averageMark[0].innerHTML 
+        + "&lt;br /> Год рождения : " + birth[0].innerHTML")
+    output.appendChild(newElement)
+}</code></pre>
+
+                        </div>
+
+                        <a href="lw5-choose.html" class="otherPage-solution" target="blank">Выполнить код</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="goto-page">
+                <div class="previous">
+                    <a href="lw4.html" class="previous-img" title="К предыдущей лабораторной">
+                        <img src="../../java-script/icons/left-arrow.svg">
+                    </a>
+                    <span  class="previous-lw">
+                        Предыдущая лабораторная
+                    </span>
+                </div>
+                <div class="next" title="К следующей лабораторной">
+                    <span class="next-lw">
+                        Следующая лабораторная
+                    </span>
+                    <a href="lw6.html" class="next-img">
+                        <img src="../../java-script/icons/right-arrow.svg">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <nav>
+            <button class="close-menu" onclick="closeMenu()"></button>
+            <div class="container">
+                <div class="menu">
+    
+                    <div class="item watch">
+                        <a href="../../../main.page.html" class="sub-title" title="Перейти к разделу">
+                            Главная
+                        </a>
+                    </div>
+    
+                    <div class="item watch">
+                        <a href="../../html-css/html&css-page.html" class="sub-title" title="Перейти к разделу">HTML5</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="../../html-css/lw-pages/lw1.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="../../html-css/lw-pages/lw2.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../html-css/lw-pages/lw3.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="item watch">
+                        <a href="../../java-script/js-page.html" class="sub-title">JavaScript</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/first-lw.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/second-lw.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/third-lw.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/fourth-lw.html" class="sub-item">
+                                    Лабораторная работа 4
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/fifth-lw.html" class="sub-item">
+                                    Лабораторная работа 5
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/sixth-lw.html" class="sub-item">
+                                    Лабораторная работа 6
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/seventh-lw.html" class="sub-item">
+                                    Лабораторная работа 7
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/eighth-lw.html" class="sub-item">
+                                    Лабораторная работа 8
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/ninth-lw.html" class="sub-item">
+                                    Лабораторная работа 9
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="../../java-script/lw-pages/tenth-lw.html" class="sub-item">
+                                    Лабораторная работа 10
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <div class="item current">
+                        <a href="../../xml/xml-page.html" class="sub-title current-title" title="Перейти к разделу">XML</a>
+                        <div class="sub-menu">
+    
+                            <div class="item-wrap">
+                                <a href="lw1.html" class="sub-item">
+                                    Лабораторная работа 1
+                                </a>
+                            </div>
+    
+                            <div class="item-wrap">
+                                <a href="lw2.html" class="sub-item">
+                                    Лабораторная работа 2
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw3.html" class="sub-item">
+                                    Лабораторная работа 3
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw4.html" class="sub-item">
+                                    Лабораторная работа 4
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw5.html" class="sub-item current-lw">
+                                    Лабораторная работа 5
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw6.html" class="sub-item">
+                                    Лабораторная работа 6
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw7.html" class="sub-item">
+                                    Лабораторная работа 7
+                                </a>
+                            </div>
+                            
+                            <div class="item-wrap">
+                                <a href="lw8.html" class="sub-item">
+                                    Лабораторная работа 8
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </nav>
+
+    </main>
+
+    <footer>
+        <div class="info">
+
+            <div class="contact-us">
+
+                <span class="article-title">
+                    Contact us
+                </span>
+
+                <div class="article-content">
+                    <div class="telephone">
+                        <span class="contact-icon"></span>
+                        <span>
+                            +375(29) 634 05 15
+                        </span>
+                    </div>
+                    <div class="mail">
+                        <span class="contact-icon"></span>
+                        <span>
+                            info@mail.ru
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="links">
+                <span class="article-title">
+                    Links
+                </span>
+
+                <div class="article-content">
+
+                   <div class="icons-resource">
+                        Icons made by 
+                        <a href="https://www.flaticon.com/" title="Flaticon" target="blank"> 
+                            www.flaticon.com
+                        </a>
+                   </div>
+
+                   <div class="icons-resource">
+                        Used library
+                        <a href="https://highlightjs.org/" title="Highlight.js" target="blank"> 
+                            www.highlightjs.org
+                        </a>
+                   </div>
+
+                   <div class="university">
+                        <a href="http://www.belstu.by/"
+                        title="Перейти на сайт БГТУ" target="blank">
+                            BSTU
+                        </a>
+                   </div>
+                    
+                </div>
+            </div>
+
+            <div class="about">
+                <span class="article-title">
+                    About
+                </span>
+
+                <div class="article-content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit laboriosam assumenda sequi vero nulla saepe dolorem harum, quae atque aut quod exercitationem quibusdam eligendi similique animi culpa repellendus quis unde minus! Eveniet, unde facere aut ab ullam quis beatae non eligendi ut odio. Recusandae odio rem in, iure voluptatibus doloremque!
+                </div>
+            </div>
+
+        </div>
+
+        <div class="rights">
+            Copyright &#169; 2021, created by
+            <a href="https://vk.com/sashadobriyan" class="vk-link" target="blank">
+                Z1FiR
+            </a>
+        </div>
+    </footer>
+
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script> -->
+    <script src="../../../main.script.js"></script>
+
+</body>
+</html>
