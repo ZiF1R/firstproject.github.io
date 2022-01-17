@@ -14,9 +14,10 @@
     </ul>
     <li><a href="#screenshots">Screenshots</a></li>
     <ul>
-      <li><a href="#products">Products page</a></li>
-      <li><a href="#cart">Cart page</a></li>
-      <li><a href="#empty_cart">Empty-cart page</a></li>
+      <li><a href="#main">Main page</a></li>
+      <li><a href="#js_page">JavaScript-labs page</a></li>
+      <li><a href="#labs">Labs list</a></li>
+      <li><a href="#task">Task example</a></li>
     </ul>
   </ul>
 </details>
@@ -40,18 +41,18 @@ This web-site built via:
 
 <h1 id="screenshots">Screenshots</h1>
 
-<h3 id="products">Main page</h3>
+<h3 id="main">Main page</h3>
 
 <img src="./readme_src/main_page.png" />
 
-<h3 id="cart">JavaScript-labs page</h3>
+<h3 id="js_page">JavaScript-labs page</h3>
 
 <img src="./readme_src/javascript-labs-page.png" />
 
-<h3 id="empty_cart">Labs list</h3>
+<h3 id="labs">Labs list</h3>
 
 <img src="./readme_src/labs-list.png" />
 
-<h3 id="empty_cart">Task example</h3>
+<h3 id="task">Task example</h3>
 
 <img src="./readme_src/task-example.png" />
